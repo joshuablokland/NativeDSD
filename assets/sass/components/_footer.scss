@@ -1,0 +1,23 @@
+.nativedsd-footer {
+    font-size: .875rem;
+
+    &.background-grey {
+        background-color: $background-grey;
+    }
+
+    .nativedsd-grid-container-m {
+        align-items: center;
+    }
+}
+
+.nativedsd-footer-nav-item {
+    padding: 0 1.25rem;
+    color: $light-grey;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease-out;
+
+    &:hover {
+        color: darken($light-grey, 10%);
+    }
+}
