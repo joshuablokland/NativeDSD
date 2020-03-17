@@ -1,0 +1,76 @@
+$fontBaseUrl: '../fonts/';
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3a2667");
+
+// Larsseit
+@font-face {
+    font-family: 'Larsseit-Bold';
+    src: url($fontBaseUrl + 'Larsseit/3A2667_0_0.eot');
+    src: url($fontBaseUrl + 'Larsseit/3A2667_0_0.eot?#iefix')
+        format('embedded-opentype'), url($fontBaseUrl + 'Larsseit/3A2667_0_0.woff2')
+        format('woff2'), url($fontBaseUrl + 'Larsseit/3A2667_0_0.woff')
+        format('woff'), url($fontBaseUrl + 'Larsseit/3A2667_0_0.ttf')
+        format('truetype');
+}
+
+@font-face {
+    font-family: 'Larsseit-Light';
+    src: url($fontBaseUrl + 'Larsseit/3A2667_1_0.eot');
+    src: url($fontBaseUrl + 'Larsseit/3A2667_1_0.eot?#iefix')
+    format('embedded-opentype'), url($fontBaseUrl + 'Larsseit/3A2667_1_0.woff2')
+    format('woff2'), url($fontBaseUrl + 'Larsseit/3A2667_1_0.woff')
+    format('woff'), url($fontBaseUrl + 'Larsseit/3A2667_1_0.ttf')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'Larsseit-Medium';
+    src: url($fontBaseUrl + 'Larsseit/3A2667_2_0.eot');
+    src: url($fontBaseUrl + 'Larsseit/3A2667_2_0.eot?#iefix')
+    format('embedded-opentype'), url($fontBaseUrl + 'Larsseit/3A2667_2_0.woff2')
+    format('woff2'), url($fontBaseUrl + 'Larsseit/3A2667_2_0.woff')
+    format('woff'), url($fontBaseUrl + 'Larsseit/3A2667_2_0.ttf')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'Larsseit-Regular';
+    src: url($fontBaseUrl + 'Larsseit/3A2667_3_0.eot');
+    src: url($fontBaseUrl + 'Larsseit/3A2667_3_0.eot?#iefix')
+    format('embedded-opentype'), url($fontBaseUrl + 'Larsseit/3A2667_3_0.woff2')
+    format('woff2'), url($fontBaseUrl + 'Larsseit/3A2667_3_0.woff')
+    format('woff'), url($fontBaseUrl + 'Larsseit/3A2667_3_0.ttf')
+    format('truetype');
+}
+
+// Tiempos
+@font-face {
+    font-family: 'Tiempos'; // Light
+    src: url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Light.eot');
+    src: url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Light.eot?#iefix')
+    format('embedded-opentype'), url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Light.woff2')
+    format('woff2'), url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Light.woff')
+    format('woff'), url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Light.woff')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'Tiempos'; // Black
+    src: url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Black.eot');
+    src: url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Black.eot?#iefix')
+    format('embedded-opentype'), url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Black.woff2')
+    format('woff2'), url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Black.woff')
+    format('woff'), url($fontBaseUrl + 'Tiempos/TiemposHeadlineWeb-Black.woff')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'Tiempos'; // Regular
+    src: url($fontBaseUrl + 'Tiempos/TiemposTextWeb-Regular.eot');
+    src: url($fontBaseUrl + 'Tiempos/TiemposTextWeb-Regular.eot?#iefix')
+    format('embedded-opentype'), url($fontBaseUrl + 'Tiempos/TiemposTextWeb-Regular.woff2')
+    format('woff2'), url($fontBaseUrl + 'Tiempos/TiemposTextWeb-Regular.woff')
+    format('woff'), url($fontBaseUrl + 'Tiempos/TiemposTextWeb-Regular.ttf')
+    format('truetype');
+}

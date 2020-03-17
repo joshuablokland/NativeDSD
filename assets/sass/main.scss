@@ -1,3 +1,4 @@
+@import './typography';
 @import './variables';
 @import './mixins';
 
@@ -5,14 +6,28 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
-    padding: $navbar-height 0 0;
+    font-family: 'Larsseit-Regular';
+}
 
-    @include breakpoint-down($breakpoint-mobile) {
-        padding: 4em 0 0;
-    }
+.nativedsd-body {
+    display: flex;
+    flex-direction: column;
+}
+
+* div {
+    box-sizing: border-box;
+}
+
+input:active {
+    outline: none;
 }
 
 // Elements
+@import './elements/button';
 
 // Common components
+@import './components/grid';
+@import './components/navbar';
+@import './components/navigation';
+@import './components/navigation-search';
 @import './components/footer';

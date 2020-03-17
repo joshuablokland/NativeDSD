@@ -1,0 +1,78 @@
+$icon-size: 15px;
+$search-spacing: 1rem;
+
+.search {
+    display: flex;
+    flex: 0 0 auto;
+    order: 2;
+    align-items: center;
+    padding: 0 $search-spacing;
+    width: $icon-size;
+    overflow: hidden;
+    transition: width 0.15s ease-out;
+
+    @include breakpoint-down(desktop) {
+        order: 1;
+        transition: none;
+    }
+
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        transition: $opacity-hover-transition;
+
+        &:hover {
+            opacity: $opacity-hover-value;
+            cursor: pointer;
+        }
+    }
+
+    .search-icon-open,
+    .search-icon-close {
+        margin-top: -1px;
+        width: $icon-size;
+        height: $icon-size;
+    }
+
+    .search-icon-open {
+        background: url($icon-src-base + 'magnifying-glass.svg') no-repeat center;
+    }
+
+    .search-icon-close {
+        display: none;
+        margin-left: auto;
+        background: url($icon-src-base + 'cross.svg') no-repeat center;
+
+        .isSearchVisible & {
+            display: block;
+        }
+    }
+
+    input {
+        display: none;
+        flex: 1 1 auto;
+        margin-left: $search-spacing;
+        margin-right: $search-spacing;
+        border-width: 0 0 1px 0;
+        border-color: rgba(color(rgb_black), .25);
+        font-size: 1rem;
+        line-height: 2.5rem;
+        transition: $border-focus-transition;
+
+        &:focus {
+            border-color: rgba(color(rgb_black), 1);
+            outline: 0;
+        }
+
+        .isSearchVisible & {
+            display: block;
+        }
+
+        @include breakpoint-down(desktop) {
+            border-width: 0;
+            margin-left: $search-spacing * 2;
+            line-height: 1.375rem;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 <?php
+include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php';
 
 function nativedsd_header () {
     return '
@@ -12,6 +13,18 @@ function nativedsd_header () {
             <link rel="stylesheet" type="text/css" href="http://'. $_SERVER['HTTP_HOST'] . '/assets/css/main.css" />
         </head>
         <body>
+            <div class="nativedsd-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar">
+                            <a href="/" title="NativeDSD" class="nativedsd-logo">NativeDSD</a>
+                            '. navigation() .'
+                            <div class="navbar-cta-holder">
+                                <button class="btn">Try for free</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     ';
 }
 ?>

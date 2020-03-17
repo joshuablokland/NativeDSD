@@ -1,0 +1,100 @@
+.navigation {
+    margin-left: auto;
+    order: 2;
+
+    @include breakpoint-down(desktop) {
+        position: relative;
+        width: 100%;
+        order: 3;
+        margin: 0.75rem 0 0;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: -$grid-spacing-desktop-x;
+            right: -$grid-spacing-desktop-x;
+            height: 1px;
+            background-color: rgba(color(rgb_black), 0.1);
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    @include breakpoint-down(mobile) {
+        &:before,
+        &:after {
+            left: -$grid-spacing-mobile-x;
+            right: -$grid-spacing-mobile-x;
+        }   
+    }
+}
+
+.navigation-scroll {
+    display: flex;
+    flex: 1 1 auto;
+    overflow-x: scroll;
+
+    .navigation-scroll-inner {
+        display: flex;
+    }
+
+    @include breakpoint-down(desktop) {
+        margin-right: -$grid-spacing-desktop-x;
+        margin-left: -$grid-spacing-desktop-x;
+        padding: 1rem 2rem;
+    }
+
+    @include breakpoint-down(mobile) {
+        margin-right: -$grid-spacing-mobile-x;
+        margin-left: -$grid-spacing-mobile-x;
+        padding: 1rem 0;
+    }
+}
+
+.navigation ul {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    order: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: opacity 0.15s ease-out;
+    opacity: 1;
+    
+    @include breakpoint-down(desktop) {
+        order: 2;
+    }
+}
+
+.navigation.isSearchVisible ul {
+    opacity: 0;
+}
+
+@include breakpoint-down(desktop) {
+    .navigation.isSearchVisible ul {
+        display: none;
+    }
+}
+
+.navigation ul li {
+    padding: 0 1rem;
+    line-height: 1.5rem;
+
+    a {
+        text-decoration: none;
+        color: color(rgb_black);
+        transition: $text-hover-transition;
+
+        &:hover {
+            color: rgba(color(rgb_black), $opacity-hover-value);
+        }
+    }
+}

@@ -1,11 +1,23 @@
-@mixin breakpoint-down($value) {
-    @media only screen and (max-width: $value) {
-        @content;
+$breakpoint-spacing: $grid-spacing-desktop-x + $grid-spacing-desktop-x;
+
+@mixin breakpoint-down($breakpoint) {
+    @if map-has-key($grid, $breakpoint) {
+        @media only screen and (max-width: map-get($grid, $breakpoint) + $breakpoint-spacing) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }
 
 @mixin breakpoint-up($value) {
-    @media only screen and (min-width: $value) {
-        @content;
+    @if map-has-key($grid, $breakpoint) {
+        @media only screen and (min-width: map-get($grid, $breakpoint) + $breakpoint-spacing) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }

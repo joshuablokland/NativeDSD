@@ -1,0 +1,15 @@
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 0.125rem;
+    background-color: color(rgb_black);
+    font-size: 1rem;
+    font-family: 'Larsseit-Bold';
+    color: color(rgb_white);
+    line-height: 1.5;
+    padding: .5em 1em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

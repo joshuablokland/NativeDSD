@@ -1,27 +1,39 @@
+$img-src-base: '../img/';
+$icon-src-base: '../icons/';
+
+// Animations 
+$opacity-hover-value: 0.5;
+$animation-properties: 0.1s ease;
+$text-hover-transition: color $animation-properties;
+$opacity-hover-transition: opacity $animation-properties;
+$border-focus-transition: border $animation-properties;
+
 // Grid
-$grid-container-l: 1280px;
-$grid-container-m: 980px;
-$grid-container-s: 780px;
+$grid-spacing-desktop-x: 48px;
+$grid-spacing-mobile-x: 16px;
+$grid: (
+    desktop: 1120px,
+    mobile: 520px
+);
 
 // View
 $navbar-height: 5em;
 
-// Breakpoints
-$breakpoint-grid-l: $grid-container-l;
-$breakpoint-grid-m: $grid-container-m + 48;
-$breakpoint-grid-s: $grid-container-s + 48;
-$breakpoint-tablet: 880px + 48;
-$breakpoint-mobile: 768px;
-
 // Colors
-$white: #FFFFFF;
-$black: #000000;
-$blue: #0055FF;
-$red: #FF0000;
-$dark-grey: #333333;
-$grey: #777777;
-$light-grey: #999999;
-$lighter-grey: #BBBBBB;
-$border-grey: #E4E4E4;
-$background-grey: #F6F7F8;
-$input-border: #DDDDDD;
+$rgb-colors: (
+    rgb_white: rgb(255,255,255),
+    rgb_grey: rgb(136,136,136),
+    rgb_black: rgb(34,34,34),
+    rgb_blue: rgb(0,173,197),
+    rgb_dark_orange: rgb(219,140,16),
+    rgb_orange: rgb(243,156,18)
+);
+
+@function color($key) {
+    @if (map-has-key($rgb-colors, $key)) {
+        @return map-get($rgb-colors, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $rgb-colors";
+    @return null;
+}
