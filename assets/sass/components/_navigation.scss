@@ -12,8 +12,8 @@
         &:after {
             content: '';
             position: absolute;
-            left: -$grid-spacing-desktop-x;
-            right: -$grid-spacing-desktop-x;
+            left: -($grid-outer-spacing-desktop-x + $grid-spacing);
+            right: -($grid-outer-spacing-desktop-x + $grid-spacing);
             height: 1px;
             background-color: rgba(color(rgb_black), 0.1);
         }
@@ -30,8 +30,8 @@
     @include breakpoint-down(mobile) {
         &:before,
         &:after {
-            left: -$grid-spacing-mobile-x;
-            right: -$grid-spacing-mobile-x;
+            left: -$grid-spacing;
+            right: -$grid-spacing;
         }   
     }
 }
@@ -46,14 +46,14 @@
     }
 
     @include breakpoint-down(desktop) {
-        margin-right: -$grid-spacing-desktop-x;
-        margin-left: -$grid-spacing-desktop-x;
+        margin-right: -($grid-outer-spacing-desktop-x + $grid-spacing);
+        margin-left: -($grid-outer-spacing-desktop-x + $grid-spacing);
         padding: 1rem 2rem;
     }
 
     @include breakpoint-down(mobile) {
-        margin-right: -$grid-spacing-mobile-x;
-        margin-left: -$grid-spacing-mobile-x;
+        margin-right: -$grid-spacing;
+        margin-left: -$grid-spacing;
         padding: 1rem 0;
     }
 }

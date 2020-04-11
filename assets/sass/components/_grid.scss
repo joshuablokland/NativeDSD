@@ -9,16 +9,17 @@
 
     @include breakpoint-down(desktop) {
         width: 100%;
-        padding: 0 $grid-spacing-desktop-x;
+        padding: 0 $grid-outer-spacing-desktop-x;
     }
 
     @include breakpoint-down(mobile) {
-        padding: 0 $grid-spacing-mobile-x;
+        padding: 0;
     }
 }
 
 @for $i from 1 through $grid-columns {
     .col-#{$i} {
         width: 100 / $i + '%';
+        padding: 0 $grid-spacing;
     }
 }

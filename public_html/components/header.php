@@ -16,11 +16,13 @@ function nativedsd_header () {
             <div class="nativedsd-body">
                 <div class="container">
                     <div class="row">
-                        <div class="navbar">
-                            <a href="/" title="NativeDSD" class="nativedsd-logo">NativeDSD</a>
-                            '. navigation() .'
-                            <div class="navbar-cta-holder">
-                                <button class="btn">Try for free</button>
+                        <div class="col-12">
+                            <div class="navbar">
+                                <a href="/" title="NativeDSD" class="nativedsd-logo">NativeDSD</a>
+                                '. navigation() .'
+                                <div class="navbar-cta-holder">
+                                    <button class="btn">Try for free</button>
+                                </div>
                             </div>
                         </div>
                     </div>

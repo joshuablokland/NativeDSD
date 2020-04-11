@@ -1,4 +1,4 @@
-$breakpoint-spacing: $grid-spacing-desktop-x + $grid-spacing-desktop-x;
+$breakpoint-spacing: $grid-outer-spacing-desktop-x + $grid-outer-spacing-desktop-x;
 
 @mixin breakpoint-down($breakpoint) {
     @if map-has-key($grid, $breakpoint) {

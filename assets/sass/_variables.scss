@@ -9,11 +9,11 @@ $opacity-hover-transition: opacity $animation-properties;
 $border-focus-transition: border $animation-properties;
 
 // Grid
-$grid-spacing-desktop-x: 48px;
-$grid-spacing-mobile-x: 16px;
+$grid-outer-spacing-desktop-x: 32px; // Grid spacing will be added
+$grid-spacing: 16px;
 $grid-columns: 12;
 $grid: (
-    desktop: 1120px,
+    desktop: 1152px,
     mobile: 520px
 );
 
