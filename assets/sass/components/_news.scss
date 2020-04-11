@@ -1,0 +1,14 @@
+.news {
+
+    @include breakpoint-up(mobile) {
+        .mobile-visible {
+            display: none;
+        }
+    }
+    
+    @include breakpoint-down(mobile) {
+        .mobile-hidden {
+            display: none;
+        }
+    }
+}

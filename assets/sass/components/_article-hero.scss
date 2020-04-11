@@ -1,0 +1,40 @@
+$article-tablet-offset: $grid-outer-spacing-desktop-x + $grid-spacing;
+$article-mobile-offset: $grid-spacing;
+
+.article-hero {
+    @include breakpoint-down(desktop) {
+        img {
+            margin-left: -($article-tablet-offset);
+            width: calc(100% + #{$article-tablet-offset});
+        }
+    }
+
+    @include breakpoint-down(mobile) {
+        img {
+            margin-left: -($article-mobile-offset);
+            width: calc(100% + #{$article-mobile-offset});
+        }
+    }
+}
+
+.article-hero-text {
+    position: relative;
+    margin: -4rem 6rem 0 0;
+    padding: 2rem 4rem 0 0;
+    background-color: color(rgb_white);
+
+    @include breakpoint-down(desktop) {
+        margin-top: -8rem;
+        margin-right: 0;
+        margin-left: -$article-tablet-offset;
+        padding: 2rem 4rem 0 3rem;
+        width: calc(100% + #{$grid-spacing});
+    }
+
+    @include breakpoint-down(mobile) {
+        margin-top: 0;
+        margin-left: 0;
+        padding: 2rem 0 0;
+        width: 100%;
+    }
+}

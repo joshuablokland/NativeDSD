@@ -11,7 +11,9 @@ $border-focus-transition: border $animation-properties;
 // Grid
 $grid-outer-spacing-desktop-x: 32px; // Grid spacing will be added
 $grid-spacing: 16px;
-$grid-columns: 12;
+$grid-columns-desktop: 12;
+$grid-columns-tablet: 8;
+$grid-columns-mobile: 4;
 $grid: (
     desktop: 1152px,
     mobile: 520px
@@ -23,6 +25,7 @@ $navbar-height: 5em;
 // Colors
 $rgb-colors: (
     rgb_white: rgb(255,255,255),
+    rgb_light_grey: rgb(232,230,228),
     rgb_grey: rgb(136,136,136),
     rgb_black: rgb(34,34,34),
     rgb_blue: rgb(0,173,197),
@@ -38,3 +41,18 @@ $rgb-colors: (
     @warn "Unknown `#{$key}` in $rgb-colors";
     @return null;
 }
+
+// Spacing
+$spacing-sizes: (
+    8: 0.5rem,
+    16: 1rem,
+    24: 1.5rem,
+    28: 1.75rem,
+    32: 2rem,
+    40: 2.5rem,
+    48: 3rem,
+    56: 3.5rem,
+    64: 4rem,
+    72: 4.5rem,
+    128: 8rem
+);

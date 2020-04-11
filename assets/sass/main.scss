@@ -22,8 +22,20 @@ input:active {
     outline: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+
+    @include breakpoint-up(desktop) {
+        border-radius: 2px;
+    }
+}
+
 // Elements
+@import './elements/heading';
+@import './elements/paragraphs';
 @import './elements/button';
+@import './elements/links';
 
 // Common components
 @import './components/grid';
@@ -31,3 +43,16 @@ input:active {
 @import './components/navigation';
 @import './components/navigation-search';
 @import './components/footer';
+@import './components/spacers';
+@import './components/post';
+
+// Articles
+@import './components/article-hero';
+@import './components/article';
+
+// Music reviews
+@import './components/music-review';
+
+// View components
+@import './components/latest-articles';
+@import './components/news';

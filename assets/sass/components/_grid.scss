@@ -5,21 +5,58 @@
 }
 
 .row {
+    display: flex;
+    flex-direction: row;
     width: map-get($grid, desktop);
 
     @include breakpoint-down(desktop) {
         width: 100%;
         padding: 0 $grid-outer-spacing-desktop-x;
+
+        &.collapse-md {
+            flex-direction: column;
+        }
     }
 
     @include breakpoint-down(mobile) {
         padding: 0;
+
+        &.collapse-sm {
+            flex-direction: column;
+        }
     }
 }
 
-@for $i from 1 through $grid-columns {
+// Grid desktop
+$grid-single-column-percentage-desktop: 100% / $grid-columns-desktop;
+
+@for $i from 1 through $grid-columns-desktop {
     .col-#{$i} {
-        width: 100 / $i + '%';
+        width: $grid-single-column-percentage-desktop * $i;
         padding: 0 $grid-spacing;
+    }
+}
+
+// Grid tablet
+$grid-single-column-percentage-tablet: 100% / $grid-columns-tablet;
+
+@for $i from 1 through $grid-columns-tablet {
+    @include breakpoint-down(desktop) {
+        .col-md-#{$i} {
+            width: $grid-single-column-percentage-tablet * $i !important;
+            padding: 0 $grid-spacing;
+        }
+    }
+}
+
+// Grid mobile
+$grid-single-column-percentage-mobile: 100% / $grid-columns-mobile;
+
+@for $i from 1 through $grid-columns-mobile {
+    @include breakpoint-down(mobile) {
+        .col-sm-#{$i} {
+            width: $grid-single-column-percentage-mobile * $i !important;
+            padding: 0 $grid-spacing;
+        }
     }
 }

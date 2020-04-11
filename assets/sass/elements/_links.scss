@@ -1,0 +1,47 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    a {
+        font-family: 'Larsseit-Medium';
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.link-wrapper {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+}
+
+.link {
+    transition: $opacity-hover-transition;
+    color: color(rgb_blue);
+
+    &.arrow:after {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 11px;
+        background: url($icon-src-base + 'arrow-right.svg') no-repeat;
+        margin-left: 0.625rem;
+    }
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+    &.category {
+        display: block;
+        color: color(rgb_dark_orange);
+        margin: 0 0 0.5rem 0;
+    }
+
+    &.author {
+        color: color(rgb_black);
+    }
+}

@@ -1,0 +1,53 @@
+.music-reviews {
+    .row {
+        justify-content: space-between;
+    }
+}
+
+.music-review-small {
+    display: flex;
+
+    .link-wrapper {
+        width: 80px;
+        margin-right: 1.5rem;
+
+        img {
+            align-self: flex-start;
+        }
+    }
+
+    .link.category {
+        margin-bottom: 0;
+    }
+
+    @each $heading, $size in $headings {
+        #{$heading} {
+            margin: 0;
+        }
+    }
+}
+
+.music-review-medium {
+    margin-bottom: 3rem;
+
+    @include breakpoint-up(mobile) {
+        .music-review-meta {
+            display: none;
+        }
+    }
+}
+
+.music-review-large {
+    margin-bottom: 4rem;
+
+    @include breakpoint-down(mobile) {
+        .description {
+            display: none;
+        }
+    }
+}
+
+.music-review-medium:last-child,
+.music-review-large:last-child {
+    margin-bottom: 0;
+}

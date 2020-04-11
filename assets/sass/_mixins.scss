@@ -11,7 +11,7 @@ $breakpoint-spacing: $grid-outer-spacing-desktop-x + $grid-outer-spacing-desktop
     }
 }
 
-@mixin breakpoint-up($value) {
+@mixin breakpoint-up($breakpoint) {
     @if map-has-key($grid, $breakpoint) {
         @media only screen and (min-width: map-get($grid, $breakpoint) + $breakpoint-spacing) {
             @content;

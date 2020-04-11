@@ -1,0 +1,47 @@
+.article-small {
+    display: flex;
+
+    .link-wrapper {
+        width: 80px;
+        margin-right: 1.5rem;
+
+        img {
+            align-self: flex-start;
+        }
+    }
+
+    .link.category {
+        margin-bottom: 0;
+    }
+
+    @each $heading, $size in $headings {
+        #{$heading} {
+            margin: 0;
+        }
+    }
+}
+
+.article-medium {
+    margin-bottom: 3rem;
+
+    @include breakpoint-up(mobile) {
+        .post-meta {
+            display: none;
+        }
+    }
+}
+
+.article-large {
+    margin-bottom: 4rem;
+
+    @include breakpoint-down(mobile) {
+        .description {
+            display: none;
+        }
+    }
+}
+
+.article-medium:last-child,
+.article-large:last-child {
+    margin-bottom: 0;
+}

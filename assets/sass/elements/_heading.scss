@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Larsseit-Medium';
+}
+
+// Desktop headings
+$headings: (
+    h1: 3rem,
+    h2: 2rem,
+    h3: 1.5rem,
+    h4: 1.125rem
+);
+
+@each $heading, $size in $headings {
+    #{$heading} {
+        font-size: $size;
+        line-height: $size + 0.5rem;
+        margin: 0 0 1rem 0;
+
+        &.styled {
+            font-family: 'Tiempos-Black';
+        }
+
+        &.with-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    }
+}
+
+// Mobile headings
+$headings-mobile: (
+    h1: 1.5rem,
+    h2: 1.5rem,
+    h3: 1rem,
+    h4: 1rem
+);
+
+@include breakpoint-down(mobile) {
+    @each $heading, $size in $headings-mobile {
+        #{$heading} {
+            font-size: $size;
+            line-height: $size + 0.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+    }
+}

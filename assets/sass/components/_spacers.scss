@@ -1,0 +1,201 @@
+.spacer-border {
+    padding: 2rem 0;
+    border-bottom: 1px solid color(rgb_light_grey);
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+@each $pixel-size, $rem-size in $spacing-sizes {
+    .m-#{$pixel-size} {
+        margin: $rem-size;
+    }
+
+    .mt-#{$pixel-size} {
+        margin-top: $rem-size;
+    }
+    
+    .mr-#{$pixel-size} {
+        margin-right: $rem-size;
+    }
+
+    .mb-#{$pixel-size} {
+        margin-bottom: $rem-size;
+    }
+
+    .ml-#{$pixel-size} {
+        margin-left: $rem-size;
+    }
+
+    .my-#{$pixel-size} {
+        margin-top: $rem-size;
+        margin-bottom: $rem-size;
+    }
+
+    .mx-#{$pixel-size} {
+        margin-left: $rem-size;
+        margin-right: $rem-size;
+    }
+
+    @include breakpoint-down(mobile) {
+        .m-sm-#{$pixel-size} {
+            margin: $rem-size !important;
+        }
+    
+        .mt-sm-#{$pixel-size} {
+            margin-top: $rem-size !important;
+        }
+        
+        .mr-sm-#{$pixel-size} {
+            margin-right: $rem-size !important;
+        }
+    
+        .mb-sm-#{$pixel-size} {
+            margin-bottom: $rem-size !important;
+        }
+    
+        .ml-sm-#{$pixel-size} {
+            margin-left: $rem-size !important;
+        }
+    
+        .my-sm-#{$pixel-size} {
+            margin-top: $rem-size !important;
+            margin-bottom: $rem-size !important;
+        }
+    
+        .mx-sm-#{$pixel-size} {
+            margin-left: $rem-size !important;
+            margin-right: $rem-size !important;
+        }
+    }
+
+    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+        .m-md-#{$pixel-size} {
+            margin: $rem-size !important;
+        }
+    
+        .mt-md-#{$pixel-size} {
+            margin-top: $rem-size !important;
+        }
+        
+        .mr-md-#{$pixel-size} {
+            margin-right: $rem-size !important;
+        }
+    
+        .mb-md-#{$pixel-size} {
+            margin-bottom: $rem-size !important;
+        }
+    
+        .ml-md-#{$pixel-size} {
+            margin-left: $rem-size !important;
+        }
+    
+        .my-md-#{$pixel-size} {
+            margin-top: $rem-size !important;
+            margin-bottom: $rem-size !important;
+        }
+    
+        .mx-md-#{$pixel-size} {
+            margin-left: $rem-size !important;
+            margin-right: $rem-size !important;
+        }
+    }
+}
+
+@each $pixel-size, $rem-size in $spacing-sizes {
+    .p-#{$pixel-size} {
+        padding: $rem-size;
+    }
+
+    .pt-#{$pixel-size} {
+        padding-top: $rem-size;
+    }
+    
+    .pr-#{$pixel-size} {
+        padding-right: $rem-size;
+    }
+
+    .pb-#{$pixel-size} {
+        padding-bottom: $rem-size;
+    }
+
+    .pl-#{$pixel-size} {
+        padding-left: $rem-size;
+    }
+
+    .py-#{$pixel-size} {
+        padding-top: $rem-size;
+        padding-bottom: $rem-size;
+    }
+
+    .px-#{$pixel-size} {
+        padding-left: $rem-size;
+        padding-right: $rem-size;
+    }
+
+    @include breakpoint-down(mobile) {
+        .p-sm-#{$pixel-size} {
+            padding: $rem-size !important;
+        }
+    
+        .pt-sm-#{$pixel-size} {
+            padding-top: $rem-size !important;
+        }
+        
+        .pr-sm-#{$pixel-size} {
+            padding-right: $rem-size !important;
+        }
+    
+        .pb-sm-#{$pixel-size} {
+            padding-bottom: $rem-size !important;
+        }
+    
+        .pl-sm-#{$pixel-size} {
+            padding-left: $rem-size !important;
+        }
+    
+        .py-sm-#{$pixel-size} {
+            padding-top: $rem-size !important;
+            padding-bottom: $rem-size !important;
+        }
+    
+        .px-sm-#{$pixel-size} {
+            padding-left: $rem-size !important;
+            padding-right: $rem-size !important;
+        }
+    }
+
+    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+        .p-md-#{$pixel-size} {
+            padding: $rem-size !important;
+        }
+    
+        .pt-md-#{$pixel-size} {
+            padding-top: $rem-size !important;
+        }
+        
+        .pr-md-#{$pixel-size} {
+            padding-right: $rem-size !important;
+        }
+    
+        .pb-md-#{$pixel-size} {
+            padding-bottom: $rem-size !important;
+        }
+    
+        .pl-md-#{$pixel-size} {
+            padding-left: $rem-size !important;
+        }
+    
+        .py-md-#{$pixel-size} {
+            padding-top: $rem-size !important;
+            padding-bottom: $rem-size !important;
+        }
+    
+        .px-md-#{$pixel-size} {
+            padding-left: $rem-size !important;
+            padding-right: $rem-size !important;
+        }
+    }
+   
+}
