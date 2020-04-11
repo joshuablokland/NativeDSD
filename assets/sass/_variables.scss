@@ -11,6 +11,7 @@ $border-focus-transition: border $animation-properties;
 // Grid
 $grid-spacing-desktop-x: 48px;
 $grid-spacing-mobile-x: 16px;
+$grid-columns: 12;
 $grid: (
     desktop: 1120px,
     mobile: 520px

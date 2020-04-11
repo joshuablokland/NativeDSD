@@ -16,3 +16,9 @@
         padding: 0 $grid-spacing-mobile-x;
     }
 }
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        width: 100 / $i + '%';
+    }
+}
