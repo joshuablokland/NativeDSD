@@ -30,7 +30,7 @@ function recording_reports() {
     return '
         <div class="container recording-reports background-dark py-128">
             '. section_title('Recording Reports', true) .'
-            '. recording_hero($recording_hero) .'
+            '. hero($recording_hero) .'
             <div class="row recording-reports-list collapse-md">
                 '.  $html_recording_reports .'
             </div>

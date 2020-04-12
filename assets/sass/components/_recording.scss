@@ -1,6 +1,6 @@
 .recording-reports {
 
-    .recording-hero {
+    .hero {
         margin-bottom: 3rem;
     }
 
@@ -17,7 +17,7 @@
     }
 
     @include breakpoint-down(mobile) {
-        .recording-hero {
+        .hero {
             margin-bottom: 2rem;
         }
 

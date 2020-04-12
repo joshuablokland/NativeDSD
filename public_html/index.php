@@ -7,10 +7,10 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/title.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/post_meta.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/components/hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/articles/article.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/articles/aricle-hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/music-reviews/music-review.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/components/recordings/recording-hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/recordings/recording.php';
     
     // Page components
