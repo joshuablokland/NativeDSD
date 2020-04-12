@@ -1,0 +1,33 @@
+.hardware-update-hero {
+    .post-meta {
+        margin-bottom: 3rem;
+    }
+
+    &.align-image-right {
+        @include breakpoint-up(desktop) {
+            .hardware-update-hero-image {
+                order: 2;
+            }
+
+            .hardware-update-hero-text {
+                order: 1;
+            }
+        }
+    }
+
+    @include breakpoint-down(desktop) {
+        .hardware-update-hero-image {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include breakpoint-down(mobile) {
+        .hardware-update-hero-image {
+            margin-bottom: 1rem;
+        }
+
+        .post-meta {
+            margin-bottom: 2rem;
+        }
+    }
+}

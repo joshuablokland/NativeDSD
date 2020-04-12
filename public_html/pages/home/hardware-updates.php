@@ -12,10 +12,8 @@ function hardware_updates() {
 
     return '
         <div class="container py-128">
-            <div class="mb-48">
-                '. section_title('Hardware Updates', true) .'
-            </div>
-            '. recording_hero($hardware_hero) .'
+            '. section_title('Hardware Updates', true, ['mb-64 mb-sm-40']) .'
+            '. hardware_update_hero($hardware_hero) .'
         </div>
     ';
 }

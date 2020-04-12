@@ -12,6 +12,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/components/music-reviews/music-review.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/recordings/recording-hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/recordings/recording.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/components/hardware-updates/hardware-update-hero.php';
     
     // Page components
     include $_SERVER['DOCUMENT_ROOT'] . '/pages/home/latest-articles.php';

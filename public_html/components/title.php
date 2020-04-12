@@ -5,11 +5,12 @@
  * 
  * @param $title string
  * @param $styled boolean
+ * @param $custom_classes = [''],
  * @param $link ['text' => string, 'url' => string]
  */
-function section_title($title, $styled = false, $link = null) {
+function section_title($title, $styled = false, $custom_classes = ['mb-48'], $link = null) {
     $html_link = '';
-    $classes = [];
+    $classes = array_merge([], $custom_classes);
 
     if ($styled == true) {
         array_push($classes, 'styled');
@@ -22,7 +23,7 @@ function section_title($title, $styled = false, $link = null) {
 
     return '
         <div class="row">
-            <div class="col-12 mb-32">
+            <div class="col-12">
                 <h1 class="'. implode(' ', $classes) .'">'. $title . $html_link .'</h1>
             </div>
         </div>

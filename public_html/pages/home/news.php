@@ -52,7 +52,7 @@ function news() {
 
     return '
         <div class="container news pb-128 pb-md-96 pb-sm-32">
-            '. section_title('News', true, ['text' => 'View more', 'url' => 'test.com']) .'
+            '. section_title('News', true, ['mb-48'], ['text' => 'View more', 'url' => 'test.com']) .'
             <div class="row collapse-sm">
                 <div class="col-7 col-md-5 col-sm-4">
                     '. $html_articles_large .'
