@@ -3,4 +3,9 @@
     font-family: 'Larsseit-Medium';
     color: color(rgb_grey);
     margin: 0;
+
+    @include breakpoint-down(desktop) {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+    }
 }

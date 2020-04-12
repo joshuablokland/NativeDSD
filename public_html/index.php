@@ -5,8 +5,11 @@
     // Components
     include $_SERVER['DOCUMENT_ROOT'] . '/components/header.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/components/title.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/components/post_meta.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/articles/article.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/articles/aricle_hero.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/components/music-reviews/music-review.php';
     
     // Page components
     include $_SERVER['DOCUMENT_ROOT'] . '/pages/home/latest_articles.php';

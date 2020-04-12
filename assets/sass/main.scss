@@ -32,10 +32,12 @@ img {
 }
 
 // Elements
-@import './elements/heading';
-@import './elements/paragraphs';
+@import './elements/align';
 @import './elements/button';
+@import './elements/heading';
 @import './elements/links';
+@import './elements/paragraphs';
+@import './elements/spacers';
 
 // Common components
 @import './components/grid';
@@ -43,8 +45,8 @@ img {
 @import './components/navigation';
 @import './components/navigation-search';
 @import './components/footer';
-@import './components/spacers';
-@import './components/post';
+
+@import './components/post-meta';
 
 // Articles
 @import './components/article-hero';

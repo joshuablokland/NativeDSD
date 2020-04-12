@@ -13,10 +13,10 @@ p {
     }
 
     @include breakpoint-down(mobile) {
-        font-size: 1rem;
+        font-size: 0.875rem;
         
         &.styled {
-            line-height: 1.75rem;
+            line-height: 1.25rem;
         }
     }
 }

@@ -26,9 +26,7 @@ function article_hero($article) {
                 <a href="'. $article['url'] .'" title="'. $article['title'] .'">
                     <p class="paragraph styled">'. $article['description'] .'</p>
                 </a>
-                <p class="post-meta">
-                    <a class="link author" href="test.com" title="'. $article['author'] .'">'. $article['author'] .'</a> on '. $article["date"] .'
-                </p>
+                '. post_meta($article['author'], $article["date"]) .'
             </div>
         </div>
     ';

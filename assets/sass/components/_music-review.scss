@@ -2,14 +2,42 @@
     .row {
         justify-content: space-between;
     }
+
+    .spacer-border:first-child {
+        padding-top: 0;
+    }
+
+    .music-reviews-list {
+        order: 1;
+    }
+    
+    .music-reviews-highlight {
+        order: 2;
+    }
+
+    @include breakpoint-down(desktop) {
+        .tablet-hidden {
+            display: none;
+        }
+
+        &.highlight-right {
+            .music-reviews-list {
+                order: 2;
+            }
+            
+            .music-reviews-highlight {
+                order: 1;
+            }
+        }
+    }
 }
 
 .music-review-small {
     display: flex;
 
     .link-wrapper {
-        width: 80px;
-        margin-right: 1.5rem;
+        width: 160px;
+        margin-right: 2rem;
 
         img {
             align-self: flex-start;
@@ -25,29 +53,50 @@
             margin: 0;
         }
     }
+
+    .music-review-small-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include breakpoint-down(mobile) {
+        .link-wrapper{
+            width: 80px;
+        }
+        
+        .paragraph {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
+    }
 }
 
 .music-review-medium {
     margin-bottom: 3rem;
 
     @include breakpoint-up(mobile) {
-        .music-review-meta {
+        .post-meta {
             display: none;
         }
     }
 }
 
 .music-review-large {
-    margin-bottom: 4rem;
+    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+        max-width: 320px;
+        margin: 0 auto;
 
-    @include breakpoint-down(mobile) {
-        .description {
-            display: none;
+        h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
         }
     }
-}
 
-.music-review-medium:last-child,
-.music-review-large:last-child {
-    margin-bottom: 0;
+    @include breakpoint-down(mobile) {
+        h1 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
 }

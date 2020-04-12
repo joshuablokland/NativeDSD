@@ -52,11 +52,7 @@ function news() {
 
     return '
         <div class="container news pb-128 pb-md-96 pb-sm-32">
-            <div class="row">
-                <div class="col-12 mb-32">
-                    <h1 class="with-link styled">News <a class="link arrow mobile-hidden" href="test.com">View more</a></h1>
-                </div>
-            </div>
+            '. section_title('News', true, ['text' => 'View more', 'url' => 'test.com']) .'
             <div class="row collapse-sm">
                 <div class="col-7 col-md-5 col-sm-4">
                     '. $html_articles_large .'
