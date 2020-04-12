@@ -1,24 +1,24 @@
-.hero {
+.recording-hero {
     &.align-image-right {
         @include breakpoint-up(desktop) {
-            .hero-image {
+            .recording-hero-image {
                 order: 2;
             }
 
-            .hero-text {
+            .recording-hero-text {
                 order: 1;
             }
         }
     }
 
     @include breakpoint-down(desktop) {
-        .hero-image {
+        .recording-hero-image {
             margin-bottom: 2rem;
         }
     }
 
     @include breakpoint-down(mobile) {
-        .hero-image {
+        .recording-hero-image {
             margin-bottom: 1rem;
         }
     }
