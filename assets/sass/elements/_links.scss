@@ -43,5 +43,9 @@ h1, h2, h3, h4, h5, h6 {
 
     &.author {
         color: color(rgb_black);
+
+        .background-dark & {
+            color: color(rgb_white);
+        }
     }
 }

@@ -18,7 +18,7 @@ function music_review_small($music_review) {
             <a class="link-wrapper" href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                 <img src="'. $music_review['featured_img'] .'" alt="'. $music_review['title'] .'"/>
             </a>
-            <div class="music-review-small-text">
+            <div class="music-review-small-text align-vertical align-center">
                 <a href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                     <h4>'. $music_review['title'] .'</h4>
                 </a>

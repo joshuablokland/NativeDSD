@@ -33,6 +33,7 @@ img {
 
 // Elements
 @import './elements/align';
+@import './elements/background';
 @import './elements/button';
 @import './elements/heading';
 @import './elements/links';
@@ -54,6 +55,10 @@ img {
 
 // Music reviews
 @import './components/music-review';
+
+// Recordings
+@import './components/recording-hero';
+@import './components/recording';
 
 // View components
 @import './components/latest-articles';

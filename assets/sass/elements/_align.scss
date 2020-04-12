@@ -1,10 +1,21 @@
 .align-left,
-.align-right {
+.align-right,
+.align-center {
     display: flex;
 }
 
+// directional
+.align-vertical {
+    flex-direction: column;
+}
+
+// position
 .align-left {
     justify-content: flex-start;
+}
+
+.align-center {
+    justify-content: center;
 }
 
 .align-right {

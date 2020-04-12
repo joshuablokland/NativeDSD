@@ -54,12 +54,6 @@
         }
     }
 
-    .music-review-small-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
     @include breakpoint-down(mobile) {
         .link-wrapper{
             width: 80px;

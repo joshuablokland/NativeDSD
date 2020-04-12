@@ -1,0 +1,41 @@
+.recording-reports {
+
+    .recording-hero {
+        margin-bottom: 3rem;
+    }
+
+    .recording-reports-list {
+        > div {
+            @include breakpoint-down(desktop) {
+                margin-bottom: 3rem;
+            }
+
+            @include breakpoint-down(mobile) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    @include breakpoint-down(mobile) {
+        .recording-hero {
+            margin-bottom: 2rem;
+        }
+
+        .mobile-hidden {
+            display: none;
+        }
+    }
+}
+
+.recording-small {
+    display: flex;
+
+    .link-wrapper {
+        width: 160px;
+        margin-right: 2rem;
+
+        img {
+            align-self: flex-start;
+        }
+    }
+}
