@@ -38,7 +38,7 @@ function music_reviews() {
     }
     
     return '
-        <div class="container music-reviews highlight-right pb-128 pb-md-64 pb-sm-16">
+        <div class="container music-reviews highlight-right mb-128 mb-md-64 mb-sm-16">
             '. section_title('Music reviews', true) .'
             <div class="row collapse-md">
                 <div class="col-6 col-md-8 music-reviews-list">

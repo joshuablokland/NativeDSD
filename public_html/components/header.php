@@ -21,7 +21,7 @@ function nativedsd_header () {
                                 <a href="/" title="NativeDSD" class="nativedsd-logo">NativeDSD</a>
                                 '. navigation() .'
                                 <div class="navbar-cta-holder">
-                                    <button class="btn">Try for free</button>
+                                    <button class="btn btn-sm">Try for free</button>
                                 </div>
                             </div>
                         </div>

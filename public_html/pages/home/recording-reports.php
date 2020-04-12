@@ -28,8 +28,8 @@ function recording_reports() {
     }
 
     return '
-        <div class="container recording-reports background-dark py-128">
-            '. section_title('Recording Reports', true) .'
+        <div class="container recording-reports background-dark-grey py-128 pt-sm-64">
+            '. section_title('Recording Reports', true, ['mb-48', 'mb-sm-40']) .'
             '. recording_hero($recording_hero) .'
             <div class="row recording-reports-list collapse-md">
                 '.  $html_recording_reports .'

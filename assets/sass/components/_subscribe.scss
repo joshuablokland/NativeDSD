@@ -1,0 +1,66 @@
+.subscribe {
+    @include breakpoint-down(mobile) {
+        margin-right: -$grid-spacing;
+        margin-left: -$grid-spacing;
+    }
+}
+
+.subscribe-inner-row {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-left: -$grid-spacing;
+    margin-right: -$grid-spacing;
+
+    .subscribe-form-holder {
+        padding-right: $grid-spacing + 64px;
+    }
+
+    @include breakpoint-down(desktop) {
+        &.collapse-md {
+            flex-direction: column;
+        }
+
+        .subscribe-form-holder {
+            padding-left: $grid-spacing + 64px;
+        }
+    }
+
+    @include breakpoint-down(mobile) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 2.5rem;
+
+        &.collapse-sm {
+            flex-direction: column;
+        }
+
+        .subscribe-form-holder {
+            padding-left: $grid-spacing;
+            padding-right: $grid-spacing;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: space-between;
+
+    input.input {
+        flex: 1 1 auto;
+        margin-right: 1rem;
+    }
+
+    @include breakpoint-down(mobile) {
+        flex-direction: column;
+
+        input.input {
+            margin: 0 0 1rem 0;
+        }
+    }
+}

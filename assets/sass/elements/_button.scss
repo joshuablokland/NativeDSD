@@ -3,13 +3,18 @@
     border: none;
     border-radius: 0.125rem;
     background-color: color(rgb_black);
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-family: 'Larsseit-Bold';
     color: color(rgb_white);
-    line-height: 1.5;
-    padding: .5em 1em;
+    line-height: 1.5rem;
+    padding: 0.75rem 1.25rem;
 
     &:hover {
         cursor: pointer;
+    }
+
+    &.btn-sm {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 }

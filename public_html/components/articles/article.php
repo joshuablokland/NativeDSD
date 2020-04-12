@@ -13,7 +13,7 @@
 function article_small($article) {
     return '
         <div class="article-small">
-            <a class="link-wrapper" href="'. $article['url'] .'" title="'. $article['title'] .'">
+            <a class="article-small-image link-wrapper" href="'. $article['url'] .'" title="'. $article['title'] .'">
                 <img src="'. $article['featured_img'] .'" alt="'. $article['title'] .'"/>
             </a>
             <div class="article-small-text">
@@ -34,23 +34,41 @@ function article_small($article) {
  * @param $article = [
  *   "category" => "News",
  *   "title" => "Melody Moore, Artist in the Spotlight",
+ *   (optional)"description" => "New DSD Release! “An American Song Album” This album is a fine collection of songs by American composers, presented...",
+ *   "author" => "Floor van der Holst",
+ *   "date" => "May 02, 2019",
  *   "url" => "http://localhost:8080",
  *   "featured_img" => get_image_base_url("dev-hero.png")
  * ];
  */
 function article_medium($article) {
+    $html_title = '<h2 class="mb-0">'. $article['title'] .'</h2>';
+    $html_description = '';
+    $classes = [];
+
+    if ($article['description']) {
+        $html_title = '<h3 class="mb-8">'. $article['title'] .'</h3>';
+        $html_description .= '
+            <a class="description" href="'. $article['url'] .'" title="'. $article['title'] .'">
+                <p class="paragraph styled">'. $article['description'] .'</p>
+            </a>
+        ';
+        array_push($classes, 'show-post-meta');
+    }
+
     return '
-        <div class="article-medium">
-            <a class="link-wrapper mb-24" href="'. $article['url'] .'" title="'. $article['title'] .'">
+        <div class="article-medium '. implode($classes) .'">
+            <a class="article-medium-image link-wrapper mb-24" href="'. $article['url'] .'" title="'. $article['title'] .'">
                 <img src="'. $article['featured_img'] .'" alt="'. $article['title'] .'"/>
             </a>
-            <div>
+            <div class="article-medium-text">
                 <a class="link category" href="test.com" title="'. $article['category'] .'">
                     '. $article['category'] .'
                 </a>
                 <a href="'. $article['url'] .'" title="'. $article['title'] .'">
-                    <h2>'. $article['title'] .'</h2>
+                    '. $html_title .'
                 </a>
+                '. $html_description .'
                 '. post_meta($article['author'], $article["date"]) .'
             </div>
         </div>
@@ -73,10 +91,10 @@ function article_medium($article) {
 function article_large($article) {
     return '
         <div class="article-large">
-            <a class="link-wrapper mb-24" href="'. $article['url'] .'" title="'. $article['title'] .'">
+            <a class="article-large-image link-wrapper mb-24" href="'. $article['url'] .'" title="'. $article['title'] .'">
                 <img src="'.$article['featured_img'].'" alt="'. $article['title'] .'"/>
             </a>
-            <div>
+            <div class="article-large-text">
                 <a class="link category" href="test.com" title="'. $article['category'] .'">
                     '. $article['category'] .'
                 </a>

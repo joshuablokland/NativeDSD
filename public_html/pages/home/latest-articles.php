@@ -39,7 +39,7 @@ function latest_articles() {
     }
 
     return '
-        <div class="container latest-articles py-128 py-md-48 py-sm-32">
+        <div class="container latest-articles my-128 my-md-48 my-sm-32">
             <div class="row collapse-md">
                 <div class="col-8 col-md-8">
                     '.article_hero($main_article).'

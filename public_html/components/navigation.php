@@ -37,7 +37,7 @@ function search() {
     return '
         <form class="search">
             <button type="submit" class="search-icon-open"></button>
-            <input type="text" name="search" placeholder="What are you looking for?" />
+            <input class="input input-sm" type="text" name="search" placeholder="What are you looking for?" />
             <button class="search-icon-close"></button>
         </form>
     ';

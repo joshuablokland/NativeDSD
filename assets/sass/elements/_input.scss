@@ -1,0 +1,20 @@
+.input {
+    background: none;
+    box-sizing: border-box;
+    border-width: 0 0 1px 0;
+    border-color: rgba(color(rgb_black), .25);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding: 0.75rem 0 0.6875rem;
+    transition: $border-focus-transition;
+
+    &:focus {
+        border-color: rgba(color(rgb_black), 1);
+        outline: 0;
+    }
+    
+    &.input-sm {
+        font-size: 1rem;
+        padding: 0.5rem 0 0.4375rem;
+    }
+}

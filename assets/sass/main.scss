@@ -36,6 +36,7 @@ img {
 @import './elements/background';
 @import './elements/button';
 @import './elements/heading';
+@import './elements/input';
 @import './elements/links';
 @import './elements/paragraphs';
 @import './elements/spacers';
@@ -47,10 +48,12 @@ img {
 @import './components/navigation-search';
 @import './components/footer';
 @import './components/post-meta';
+@import './components/subscribe';
 
 // Articles
 @import './components/article-hero';
 @import './components/article';
+@import './components/highlighted-articles';
 
 // Music reviews
 @import './components/music-review';

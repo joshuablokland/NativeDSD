@@ -25,6 +25,7 @@ $navbar-height: 5em;
 // Colors
 $rgb-colors: (
     rgb_white: rgb(255,255,255),
+    rgb_beige: rgb(246,245,242),
     rgb_light_grey: rgb(232,230,228),
     rgb_grey: rgb(136,136,136),
     rgb_dark_grey: rgb(51,51,51),
@@ -45,6 +46,7 @@ $rgb-colors: (
 
 // Spacing
 $spacing-sizes: (
+    0: 0,
     8: 0.5rem,
     16: 1rem,
     24: 1.5rem,
