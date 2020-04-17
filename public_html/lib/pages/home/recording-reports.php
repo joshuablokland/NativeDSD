@@ -9,22 +9,16 @@ function recording_reports() {
         "url" => "http://localhost:8080",
         "featured_img" => get_image_base_url("dev-recording-reports-hero.png")
     ];
-
-    $recording_reports = [[
+    $recording_report = [
         "category" => "Recording Report",
         "title" => "Melody Moore, Artist in the Spotlight",
         "url" => "http://localhost:8080",
         "featured_img" => get_image_base_url("dev-recording-reports-small.png")
-    ], [
-        "category" => "Recording Report",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-recording-reports-small.png")
-    ]];
+    ];
 
     $html_recording_reports = '';
-    foreach($recording_reports as $recording) {
-        $html_recording_reports .= '<div class="col-6 col-md-8">'. recording_small($recording) .'</div>';
+    for ($i = 0; $i < 2; $i++) {
+        $html_recording_reports .= '<div class="col-6 col-md-8">'. recording_small($recording_report) .'</div>';
     }
 
     return '

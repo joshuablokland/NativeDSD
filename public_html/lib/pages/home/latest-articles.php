@@ -11,30 +11,15 @@ function latest_articles() {
         "featured_img" => get_image_base_url("dev-hero.png")
     ];
 
-    $articles = [[
+    $article = [
         "category" => "News",
         "title" => "Melody Moore, Artist in the Spotlight",
         "url" => "http://localhost:8080",
         "featured_img" => get_image_base_url("dev-article-small.png")
-    ], [
-        "category" => "Music Reviews",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-small.png")
-    ], [
-        "category" => "Recording Reports",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-small.png")
-    ], [
-        "category" => "Hardware Updates",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-small.png")
-    ]];
+    ];
 
     $html_articles = '';
-    foreach($articles as $article) {
+    for ($i = 0; $i < 4; $i++) {
         $html_articles .= '<div class="spacer-border">'. article_small($article) .'</div>';
     }
 

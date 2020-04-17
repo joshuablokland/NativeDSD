@@ -1,7 +1,8 @@
 <?php
 function news() {
     $html_articles_large = '';
-    $articles_large = [[
+    $html_articles_medium = '';
+    $article_large = [
         "category" => "News",
         "title" => "Melody Moore, Artist in the Spotlight",
         "description" => "New DSD Release! “An American Song Album” This album is a fine collection of songs by American composers, presented...",
@@ -9,45 +10,22 @@ function news() {
         "date" => "May 02, 2019",
         "url" => "http://localhost:8080",
         "featured_img" => get_image_base_url("dev-article-large.png")
-    ], [
+    ];
+    $article_medium = [
         "category" => "News",
         "title" => "Melody Moore, Artist in the Spotlight",
-        "description" => "New DSD Release! “An American Song Album” This album is a fine collection of songs by American composers, presented...",
         "author" => "Floor van der Holst",
         "date" => "May 02, 2019",
         "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-large.png")
-    ]];
+        "featured_img" => get_image_base_url("dev-article-medium.png")
+    ];
     
-    foreach($articles_large as $article) {
-        $html_articles_large .= article_large($article);
+    for ($i = 0; $i < 2; $i++) {
+        $html_articles_large .= article_large($article_large);
     }
     
-    $html_articles_medium = '';
-    $articles_medium = [[
-        "category" => "News",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "author" => "Floor van der Holst",
-        "date" => "May 02, 2019",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-medium.png")
-    ], [
-        "category" => "News",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "author" => "Floor van der Holst",
-        "date" => "May 02, 2019",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-medium.png")
-    ], [
-        "category" => "News",
-        "title" => "Melody Moore, Artist in the Spotlight",
-        "author" => "Floor van der Holst",
-        "date" => "May 02, 2019",
-        "url" => "http://localhost:8080",
-        "featured_img" => get_image_base_url("dev-article-medium.png")
-    ]];
-    foreach($articles_medium as $article) {
-        $html_articles_medium .= article_medium($article);
+    for ($i = 0; $i < 4; $i++) {
+        $html_articles_medium .= article_medium($article_medium);
     }
 
     return '
