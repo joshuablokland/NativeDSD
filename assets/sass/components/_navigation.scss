@@ -97,4 +97,8 @@
             color: rgba(color(rgb_black), $opacity-hover-value);
         }
     }
+
+    &.current-menu-item a {
+        color: color(rgb_dark_orange);
+    }
 }

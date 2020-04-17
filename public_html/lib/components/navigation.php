@@ -1,17 +1,17 @@
 <?php
 function navigation() {
-    $navigation_items = [[
+    $navigation_items = [[  
         'title' => 'News',
-        'link' => 'http://localhost:8080'
+        'link' => '/news/'
     ], [
         'title' => 'Music Reviews',
-        'link' => 'http://localhost:8080'
+        'link' => '/music-reviews/'
     ], [
         'title' => 'Recording Reports',
-        'link' => 'http://localhost:8080'
+        'link' => '/recording-reports/'
     ], [
         'title' => 'Hardware Updates',
-        'link' => 'http://localhost:8080'
+        'link' => '/hardware-updates/'
     ]];
 
     return '

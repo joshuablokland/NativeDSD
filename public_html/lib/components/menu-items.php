@@ -11,7 +11,9 @@
 function menu_items($menu_items) {
     $html = '';
     foreach($menu_items as $item) {
-        $html .= '<li><a href="'. $item["link"] .'" title="'. $item["title"] .'">'. $item["title"] .'</a></li>';
+        $active = ($item["link"] == $_SERVER["REQUEST_URI"]) ? 'current-menu-item' : '';
+
+        $html .= '<li class="'. $active .'"><a href="http://localhost:8080'. $item["link"] .'" title="'. $item["title"] .'">'. $item["title"] .'</a></li>';
     }
 
     return $html;

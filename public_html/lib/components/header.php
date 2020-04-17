@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/navigation.php';
 
 function nativedsd_header () {
     return '
