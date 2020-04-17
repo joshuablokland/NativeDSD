@@ -10,9 +10,9 @@
  *   "featured_img" => get_image_base_url("dev-hero.png")
  * ];
  */
-function article_hero($article) {
+function article_hero($article, $classes = []) {
     return '
-        <div class="article-hero">
+        <div class="article-hero '. implode(' ', $classes) .'">
             <a class="link-wrapper" href="'. $article['url'] .'" title="'. $article['title'] .'">
                 <img src="'.$article['featured_img'].'" alt="'. $article['title'] .'"/>
             </a>

@@ -8,6 +8,7 @@
 .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: map-get($grid, desktop);
 
     @include breakpoint-down(desktop) {
@@ -25,6 +26,28 @@
         &.collapse-sm {
             flex-direction: column;
         }
+    }
+}
+
+.row-masonry {
+    display: flex;
+    flex-flow: column wrap;
+
+    &.articles-large {
+        max-height: 2620px;
+    }
+
+    > div:nth-child(5) {
+        margin-top: 4rem;
+    }
+
+    @include breakpoint-down(desktop) {
+        width: 100%;
+        padding: 0 $grid-outer-spacing-desktop-x;
+    }
+
+    @include breakpoint-down(mobile) {
+        padding: 0;
     }
 }
 

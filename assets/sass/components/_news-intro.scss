@@ -1,0 +1,21 @@
+.news-intro {
+    .background {
+        top: -5.5rem;
+        height: calc(100% - 4rem);
+        width: calc(50% + 10.5rem);
+        background-image: url($img-src-base + 'background-news-intro.svg');
+        background-position-y: center;
+        background-position-x: right;
+
+        @include breakpoint-down(desktop) {
+            background-image: none;
+            top: 0;
+            height: 100%;
+            width: 50%;
+        }
+
+        @include breakpoint-down(mobile) {
+            width: 25%;
+        }
+    }
+}
