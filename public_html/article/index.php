@@ -7,7 +7,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/footer.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/title.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/menu-items.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/post_meta.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/post-meta.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/subscribe.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/page-intro.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/articles/article.php';
@@ -20,7 +20,8 @@
         $intro = [
             "category" => "News",
             "title" => "This is the artist in the Spotlight",
-            "text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "author" => "Floor van der Holst",
+            "date" => "May 02, 2019",
         ];
 
         $hero_article = [
@@ -46,7 +47,6 @@
 
     <div class="container news-intro mb-80 mb-md-64 mb-sm-48">
         <?php echo page_intro($intro); ?>
-     
     </div>
 
 

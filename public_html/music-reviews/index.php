@@ -7,7 +7,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/footer.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/title.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/menu-items.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/post_meta.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/post-meta.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/subscribe.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/page-intro.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/pagination.php';
@@ -20,7 +20,7 @@
     <?php 
         $intro = [
             "title" => "Music Reviews",
-            "text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         ];
 
         $large_review = [
