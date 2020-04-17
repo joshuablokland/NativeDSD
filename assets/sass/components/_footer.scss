@@ -2,6 +2,10 @@ $footer-menu-spacing: 1rem;
 
 .nativedsd-footer {
     background-color: color(rgb_black);
+    background-image: url($img-src-base + 'background-footer.svg');
+    background-position-y: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
     color: color(rgb_white);
     padding-bottom: 2.5rem;
 
@@ -95,6 +99,7 @@ $footer-menu-spacing: 1rem;
 @include breakpoint-down(mobile) {
     .nativedsd-footer {
         padding-bottom: 3rem;
+        background-position-x: 25%;
 
         .intro {
             padding-top: 4rem;
