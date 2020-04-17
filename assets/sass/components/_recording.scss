@@ -1,4 +1,8 @@
 .recording-reports {
+    background-image: url($img-src-base + 'background-recording.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
 
     .recording-hero {
         margin-bottom: 3rem;
@@ -14,6 +18,10 @@
                 margin-bottom: 2rem;
             }
         }
+    }
+
+    @include breakpoint-down(desktop) {
+        background-position-x: left;
     }
 
     @include breakpoint-down(mobile) {
