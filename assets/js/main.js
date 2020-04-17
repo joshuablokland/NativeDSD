@@ -46,7 +46,7 @@ class Navigation {
 
     handleResize() {
         if (!this.isVisible) {
-            this.form.style.width = '15px';
+            this.form.style.width = '16px';
             return;
         }
 

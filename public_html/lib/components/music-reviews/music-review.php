@@ -51,7 +51,7 @@ function music_review_medium($music_review) {
             </a>
             <div>
                 <a href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
-                    <h2>'. $music_review['title'] .'</h2>
+                    <h3>'. $music_review['title'] .'</h3>
                 </a>
                 <a href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                     <p class="paragraph mb-8">'. $music_review['artist'] .'</p>

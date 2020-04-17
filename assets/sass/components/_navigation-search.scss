@@ -1,4 +1,4 @@
-$icon-size: 15px;
+
 $search-spacing: 1rem;
 
 .search {
@@ -7,7 +7,7 @@ $search-spacing: 1rem;
     order: 2;
     align-items: center;
     padding: 0 $search-spacing;
-    width: $icon-size;
+    width: 16px;
     overflow: hidden;
     transition: width 0.15s ease-out;
 
@@ -30,19 +30,25 @@ $search-spacing: 1rem;
 
     .search-icon-open,
     .search-icon-close {
+        display: inline-block;
         margin-top: -1px;
-        width: $icon-size;
-        height: $icon-size;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .search-icon-open {
-        background: url($icon-src-base + 'magnifying-glass.svg') no-repeat center;
+        width: 16px;
+        height: 16px;
+        background-image: url($icon-src-base + 'magnifying-glass.svg');
     }
 
     .search-icon-close {
+        width: 14px;
+        height: 14px;
         display: none;
         margin-left: auto;
-        background: url($icon-src-base + 'cross.svg') no-repeat center;
+        background-image: url($icon-src-base + 'cross.svg');
 
         .isSearchVisible & {
             display: block;
@@ -61,8 +67,9 @@ $search-spacing: 1rem;
 
         @include breakpoint-down(desktop) {
             border-width: 0;
+            padding: 0;
             margin-left: $search-spacing * 2;
-            line-height: 1.375rem;
+            line-height: 1.5rem;
         }
     }
 }

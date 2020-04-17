@@ -4,11 +4,24 @@
 
     h1.styled {
         font-size: 4rem;
-        line-height: 4.5rem;
+        line-height: 4.25rem;
     }
 
     .paragraph.styled {
         font-size: 1.5rem;
         line-height: 2.5rem;
+    }
+
+    @include breakpoint-down(mobile) {
+
+        h1.styled {
+            font-size: 2rem;
+            line-height: 2.25rem;
+        }
+
+        .paragraph.styled {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
     }
 }
