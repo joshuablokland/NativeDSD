@@ -66,6 +66,7 @@ function news() {
                     <a class="link arrow" href="test.com">View more</a>
                 </div>
             </div>
+            <div class="background left background-beige"></div>
         </section>
     ';
 }

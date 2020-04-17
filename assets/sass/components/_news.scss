@@ -1,4 +1,19 @@
 .news {
+    .background {
+        bottom: auto;
+        top: -3rem;
+        width: calc(50% - 13.5rem);
+        height: 30rem;
+
+        @include breakpoint-down(desktop) {
+            width: calc(50% - 1rem);
+            height: 22rem;
+        }
+
+        @include breakpoint-down(mobile) {
+            display: none;
+        }
+    }
 
     @include breakpoint-up(mobile) {
         .mobile-visible {
