@@ -24,7 +24,7 @@ function latest_articles() {
     }
 
     return '
-        <section class="container latest-articles my-128 my-md-48 my-sm-32">
+        <section class="container latest-articles mt-128 mt-md-48 mt-sm-32 mb-176 mb-md-144 mb-sm-64">
             <div class="row collapse-md">
                 <div class="col-8 col-md-8">
                     '.article_hero($main_article).'

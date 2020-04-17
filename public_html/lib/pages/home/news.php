@@ -24,7 +24,7 @@ function news() {
         $html_articles_large .= article_large($article_large);
     }
     
-    for ($i = 0; $i < 4; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $html_articles_medium .= article_medium($article_medium);
     }
 
