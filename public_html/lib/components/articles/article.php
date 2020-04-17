@@ -17,7 +17,7 @@ function article_small($article) {
                 <img src="'. $article['featured_img'] .'" alt="'. $article['title'] .'"/>
             </a>
             <div class="article-small-text">
-                <a class="link category" href="test.com" title="'. $article['category'] .'">
+                <a class="link category" href="http://localhost:8080/news" title="'. $article['category'] .'">
                     '. $article['category'] .'
                 </a>
                 <a href="'. $article['url'] .'" title="'. $article['title'] .'">
@@ -62,7 +62,7 @@ function article_medium($article) {
                 <img src="'. $article['featured_img'] .'" alt="'. $article['title'] .'"/>
             </a>
             <div class="article-medium-text">
-                <a class="link category" href="test.com" title="'. $article['category'] .'">
+                <a class="link category" href="http://localhost:8080/news" title="'. $article['category'] .'">
                     '. $article['category'] .'
                 </a>
                 <a href="'. $article['url'] .'" title="'. $article['title'] .'">
@@ -95,7 +95,7 @@ function article_large($article) {
                 <img src="'.$article['featured_img'].'" alt="'. $article['title'] .'"/>
             </a>
             <div class="article-large-text">
-                <a class="link category" href="test.com" title="'. $article['category'] .'">
+                <a class="link category" href="http://localhost:8080/news" title="'. $article['category'] .'">
                     '. $article['category'] .'
                 </a>
                 <a href="'. $article['url'] .'" title="'. $article['title'] .'">

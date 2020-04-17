@@ -7,14 +7,14 @@ function latest_articles() {
         "description" => "New DSD Release! “An American Song Album” This album is a fine collection of songs by American composers, presented...",
         "author" => "Floor van der Holst",
         "date" => "May 02, 2019",
-        "url" => "http://localhost:8080",
+        "url" => "http://localhost:8080/article",
         "featured_img" => get_image_base_url("dev-hero.png")
     ];
 
     $article = [
         "category" => "News",
         "title" => "Melody Moore, Artist in the Spotlight",
-        "url" => "http://localhost:8080",
+        "url" => "http://localhost:8080/article",
         "featured_img" => get_image_base_url("dev-article-small.png")
     ];
 
