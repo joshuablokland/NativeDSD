@@ -1,7 +1,18 @@
 .subscribe {
+    background-image: url($img-src-base + 'background-subscribe.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-y: center;
+    background-position-x: left;
+
     @include breakpoint-down(mobile) {
         margin-right: -$grid-spacing;
         margin-left: -$grid-spacing;
+        background-position-x: -170px;
+    }
+
+    input.input {
+        background: color(rgb_beige);
     }
 }
 
