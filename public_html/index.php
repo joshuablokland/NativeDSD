@@ -35,13 +35,13 @@
     <?php echo recording_reports(); ?>
     <?php echo hardware_updates(); ?>
     
-    <div class="container mb-128 mb-md-96 mb-sm-64">
+    <section class="container mb-128 mb-md-96 mb-sm-64">
         <div class="row">
             <div class="col-12">
                 <?php echo subscribe(); ?>
             </div>
         </div>
-    </div>
+    </section>
     
     <?php echo highlighted_articles(); ?>
 

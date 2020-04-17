@@ -70,7 +70,7 @@
         }
     }
 
-    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+    @include breakpoint-between(desktop, mobile) {
         .m-md-#{$pixel-size} {
             margin: $rem-size !important;
         }
@@ -166,7 +166,7 @@
         }
     }
 
-    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+    @include breakpoint-between(desktop, mobile) {
         .p-md-#{$pixel-size} {
             padding: $rem-size !important;
         }

@@ -33,11 +33,11 @@ function highlighted_articles() {
     }
 
     return '
-        <div class="container highlighted-articles mb-128 mb-md-96 mb-sm-64">
+        <section class="container highlighted-articles mb-128 mb-md-96 mb-sm-64">
             <div class="row collapse-sm">
                 '. $html_articles .'
             </div>
-        </div>
+        </section>
     ';
 }
 ?>

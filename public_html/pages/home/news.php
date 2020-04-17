@@ -51,7 +51,7 @@ function news() {
     }
 
     return '
-        <div class="container news mb-128 mb-md-96 mb-sm-64">
+        <section class="container news mb-128 mb-md-96 mb-sm-64">
             '. section_title('News', true, ['mb-48 mb-sm-24'], ['text' => 'View more', 'url' => 'test.com']) .'
             <div class="row collapse-sm">
                 <div class="col-7 col-md-5 col-sm-4">
@@ -66,7 +66,7 @@ function news() {
                     <a class="link arrow" href="test.com">View more</a>
                 </div>
             </div>
-        </div>
+        </section>
     ';
 }
 ?>

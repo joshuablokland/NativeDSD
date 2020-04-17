@@ -14,7 +14,7 @@ function nativedsd_header () {
         </head>
         <body>
             <div class="nativedsd-body">
-                <div class="container">
+                <header class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="navbar">
@@ -26,7 +26,7 @@ function nativedsd_header () {
                             </div>
                         </div>
                     </div>
-                </div>
+                </header>
     ';
 }
 ?>

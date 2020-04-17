@@ -77,7 +77,7 @@
 }
 
 .music-review-large {
-    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+    @include breakpoint-between(desktop, mobile) {
         max-width: 320px;
         margin: 0 auto;
 

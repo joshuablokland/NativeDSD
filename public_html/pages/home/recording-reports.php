@@ -28,7 +28,7 @@ function recording_reports() {
     }
 
     return '
-        <div class="container recording-reports background-dark-grey py-128 pt-sm-64">
+        <section class="container recording-reports background-dark-grey py-128 pt-sm-64">
             '. section_title('Recording Reports', true, ['mb-48', 'mb-sm-40']) .'
             '. recording_hero($recording_hero) .'
             <div class="row recording-reports-list collapse-md">
@@ -39,7 +39,7 @@ function recording_reports() {
                     <a class="link arrow" href="http://localhost:8080" title="View more">View more</a>
                 </div>
             </div>
-        </div>
+        </section>
     ';
 }
 ?>

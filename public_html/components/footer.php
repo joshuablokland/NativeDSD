@@ -31,7 +31,7 @@ function nativedsd_footer() {
 
     return '
             <footer class="nativedsd-footer">
-                <div class="container">
+                <section class="container">
                     <div class="row collapse-md">
                         <div class="intro col-6 col-md-8">
                             <h1 class="heading styled">
@@ -56,7 +56,7 @@ function nativedsd_footer() {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </section>
             </footer>
             </div>
             <script src="http://'. $_SERVER['HTTP_HOST'] . '/assets/js/main-min.js"></script>

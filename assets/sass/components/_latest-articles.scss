@@ -1,7 +1,48 @@
 $latest-article-tablet-offset: $grid-spacing * 2;
 
 .latest-articles {
-    @media only screen and (max-width: map-get($grid, desktop) + $breakpoint-spacing) and (min-width: map-get($grid, mobile) + $breakpoint-spacing) {
+    .background {
+        background-image: url($img-src-base + 'background-latest-articles.svg');
+        background-position: top 80px left;
+    }
+    .background.hide-tablet {
+        height: calc(100% + 13.5rem);
+        width: calc(50% + 10.5rem);
+    }
+
+    .background.show-tablet {
+        height: calc(100% + 3rem);
+        width: calc(50% + 2rem);
+        right: -2rem;
+
+        @include breakpoint-down(mobile) {
+            height: 13rem;
+            width: 25%;
+            right: 0;
+            bottom: auto;
+            top: -2rem;
+        }
+    }
+
+    .col-8.col-md-8 {
+        position: relative; // For mobile background
+    }
+
+    .show-tablet {
+        display: none;
+    }
+
+    @include breakpoint-down(desktop) {
+        .hide-tablet {
+            display: none;
+        }
+
+        .show-tablet {
+            display: block;
+        }
+    }
+
+    @include breakpoint-between(desktop, mobile) {
         .spacer-border:nth-child(3),
         .spacer-border:nth-child(4) {
             border-bottom: 0;

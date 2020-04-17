@@ -39,10 +39,11 @@ function latest_articles() {
     }
 
     return '
-        <div class="container latest-articles my-128 my-md-48 my-sm-32">
+        <section class="container latest-articles my-128 my-md-48 my-sm-32">
             <div class="row collapse-md">
                 <div class="col-8 col-md-8">
                     '.article_hero($main_article).'
+                    <div class="background right background-beige show-tablet"></div>
                 </div>
                 <div class="col-4 col-md-8 pt-md-64 pt-sm-48">
                     <h2>Latest articles</h2>
@@ -51,7 +52,8 @@ function latest_articles() {
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="background right background-beige hide-tablet"></div>
+        </section>
     ';
 }
 ?>

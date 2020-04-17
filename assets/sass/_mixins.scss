@@ -21,3 +21,14 @@ $breakpoint-spacing: $grid-outer-spacing-desktop-x + $grid-outer-spacing-desktop
             + "Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }
+
+@mixin breakpoint-between($breakpoint-start, $breakpoint-end) {
+    @if map-has-key($grid, $breakpoint-start) & map-has-key($grid, $breakpoint-end) {
+        @media only screen and (max-width: map-get($grid, $breakpoint-start) + $breakpoint-spacing) and (min-width: map-get($grid, $breakpoint-end) + $breakpoint-spacing) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
