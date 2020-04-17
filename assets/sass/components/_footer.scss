@@ -1,15 +1,126 @@
-.nativedsd-footer {
-    font-size: .875rem;
+$footer-menu-spacing: 1rem;
 
-    .nativedsd-grid-container-m {
-        align-items: center;
+.nativedsd-footer {
+    background-color: color(rgb_black);
+    color: color(rgb_white);
+    padding-bottom: 2.5rem;
+
+    .row {
+        justify-content: center;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .heading {
+        font-family: 'Tiempos-Light';
+        font-size: 4rem;
+        line-height: 4.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro {
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+
+        .paragraph.styled {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 1rem;
+        display: flex;
+        list-style: none;
+
+        > li {
+            padding: 0 $footer-menu-spacing;
+
+            a {
+                opacity: 0.75;
+                transition: $opacity-hover-transition;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 
-.nativedsd-footer-nav-item {
-    padding: 0 1.25rem;
-    color: color(rgb_white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.15s ease-out;
+.nativedsd-footer-navigation-menu {
+    ul {
+        margin-left: -$footer-menu-spacing;
+    }
+}
+
+.nativedsd-footer-social-menu {
+    ul {
+        justify-content: flex-end;
+        margin-right: -$footer-menu-spacing;
+    }
+}
+
+@include breakpoint-down(desktop) {
+    .nativedsd-footer-navigation-menu {
+        margin-bottom: 1.5rem;
+    }
+
+    .nativedsd-footer-navigation-menu ul {
+        margin-left: 0;
+    }
+
+    .nativedsd-footer-social-menu ul {
+        margin-right: 0;
+    }
+
+    .nativedsd-footer-navigation-menu ul,
+    .nativedsd-footer-social-menu ul {
+        justify-content: center;
+    }
+}
+
+@include breakpoint-down(mobile) {
+    .nativedsd-footer {
+        padding-bottom: 3rem;
+
+        .intro {
+            padding-top: 4rem;
+            padding-bottom: 3rem;
+
+            .heading {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .paragraph.styled {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .nativedsd-footer-navigation-menu ul,
+    .nativedsd-footer-social-menu ul {
+        flex-direction: column;
+
+        li {
+            text-align: center;
+            margin-bottom: 0.5rem
+        }
+    }
 }

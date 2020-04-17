@@ -17,4 +17,14 @@
         font-size: 1rem;
         padding: 0.5rem 1rem;
     }
+
+    &.btn-white {
+        background-color: color(rgb_white);
+        color: color(rgb_black);
+    }
+
+    @include breakpoint-down(mobile) {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
 }

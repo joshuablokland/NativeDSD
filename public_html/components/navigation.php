@@ -13,18 +13,13 @@ function navigation() {
         'title' => 'Hardware Updates',
         'link' => 'http://localhost:8080'
     ]];
-    
-    $html_links = '';
-    foreach($navigation_items as $item) {
-        $html_links .= '<li><a href="'. $item["link"] .'" title="'. $item["title"] .'">'. $item["title"] .'</a></li>';
-    }
 
     return '
         <div id="nativedsd-navigation" class="navigation">
             <div class="navigation-scroll">
                 <div class="navigation-scroll-inner">
                     <ul>
-                        '. $html_links .'
+                        '. menu_items($navigation_items) .'
                     </ul>
                     '.search().'
                 </div>

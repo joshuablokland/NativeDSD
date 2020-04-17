@@ -6,6 +6,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/components/header.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/title.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/components/menu-items.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/post_meta.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/subscribe.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/components/articles/article.php';
