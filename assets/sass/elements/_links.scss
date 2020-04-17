@@ -22,13 +22,22 @@ h1, h2, h3, h4, h5, h6 {
     transition: $opacity-hover-transition;
     color: color(rgb_blue);
 
-    &.arrow:after {
+    &.arrow-before:before,
+    &.arrow-after:after {
         content: '';
         display: inline-block;
         width: 16px;
         height: 11px;
+    }
+
+    &.arrow-after:after {
         background: url($icon-src-base + 'arrow-right.svg') no-repeat;
         margin-left: 0.625rem;
+    }
+
+    &.arrow-before:before {
+        background: url($icon-src-base + 'arrow-left.svg') no-repeat;
+        margin-right: 0.625rem;
     }
 
     &:hover {

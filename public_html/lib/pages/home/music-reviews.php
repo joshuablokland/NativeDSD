@@ -46,7 +46,7 @@ function music_reviews() {
                         '. $html_small_reviews .'
                     </div>
                     <div class="align-right mt-8 tablet-hidden">
-                        <a class="link arrow" href="http://localhost:8080" title="View more">View more</a>
+                        <a class="link arrow-after" href="http://localhost:8080" title="View more">View more</a>
                     </div>
                 </div>
                 <div class="col-5 col-md-8 music-reviews-highlight mb-md-48 mb-sm-48">

@@ -17,7 +17,7 @@ function section_title($title, $styled = false, $custom_classes = ['mb-48'], $li
     }
 
     if ($link != null) {
-        $html_link .= ' <a class="link arrow mobile-hidden" href="'. $link['url'] .'">'. $link['text'] .'</a>';
+        $html_link .= ' <a class="link arrow-after mobile-hidden" href="'. $link['url'] .'">'. $link['text'] .'</a>';
         array_push($classes, 'with-link');
     }
 

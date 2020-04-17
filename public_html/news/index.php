@@ -10,6 +10,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/post_meta.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/subscribe.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/page-intro.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/pagination.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/articles/article-hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/articles/article.php';
     
@@ -63,5 +64,7 @@
             <?php endfor; ?>
         </div>
     </div>
+
+    <?php echo pagination(); ?>
 
 <?php echo nativedsd_footer(); ?>

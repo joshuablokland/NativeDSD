@@ -63,7 +63,7 @@ function news() {
             </div>
             <div class="row pt-32 mobile-visible">
                 <div class="col-sm-4">
-                    <a class="link arrow" href="test.com">View more</a>
+                    <a class="link arrow-after" href="test.com">View more</a>
                 </div>
             </div>
             <div class="background left background-beige"></div>

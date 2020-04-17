@@ -41,7 +41,7 @@ function hardware_update_hero($hardware_update_hero, $align_image_right = true) 
                     </p>
                 </a>
                 '. post_meta($hardware_update_hero['author'], $hardware_update_hero['date']) .'
-                <a class="link arrow" href="http://localhost:8080" title="View more">View more</a>
+                <a class="link arrow-after" href="http://localhost:8080" title="View more">View more</a>
             </div>
         </div>
     ';

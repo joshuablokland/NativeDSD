@@ -36,7 +36,7 @@ function recording_reports() {
             </div>
             <div class="row mt-64 mobile-hidden">
                 <div class="col-12 align-right">
-                    <a class="link arrow" href="http://localhost:8080" title="View more">View more</a>
+                    <a class="link arrow-after" href="http://localhost:8080" title="View more">View more</a>
                 </div>
             </div>
         </section>
