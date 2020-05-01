@@ -79,6 +79,68 @@ class Navigation {
 
 const navigation = new Navigation(document.getElementById('nativedsd-navigation'));
 
+
+class SubscribePopup {
+    constructor(element) {
+        if (!element) {
+            return;
+        }
+
+        if (this.hasUserInteractedWithPopup()) {
+            element.remove();
+
+            return;
+        }
+
+        this.element = element;
+        this.isOpen = this.hasUserInteractedWithPopup() ? false : true;
+        this.form = element.querySelector('.subscribe-form');
+        this.btnClose = element.querySelector('.btn-close-subscribe');
+
+        this.form.addEventListener('submit', this.handleSubmit.bind(this));
+        this.btnClose.addEventListener('click', this.handleClick.bind(this));
+
+        this.setClassName();
+    }
+
+    toggleOpen() {
+        this.isOpen = !this.isOpen;
+
+        this.setClassName();
+    }
+
+    setClassName() {
+        if (this.isOpen) {
+            this.element.classList.add('show');
+
+            return;
+        }
+
+        this.element.classList.remove('show');
+    }
+
+    handleSubmit() {
+        this.toggleOpen();
+        this.setUserInteractedWithPopup();
+    }
+
+    handleClick() {
+        this.toggleOpen();
+        this.setUserInteractedWithPopup();
+    }
+
+    hasUserInteractedWithPopup() {
+        return window.localStorage.getItem('hasUserInteractedWithPopup');
+    }
+
+    setUserInteractedWithPopup() {
+        window.localStorage.setItem('hasUserInteractedWithPopup', true);
+    }
+}
+
+const subscribePopup = new SubscribePopup(document.getElementById('nativedsd-subscribe-popup'));
+
+// Resize
 window.addEventListener('resize', () => {
     if (navigation.element) {
         navigation.handleResize();
