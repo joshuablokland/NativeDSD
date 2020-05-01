@@ -28,3 +28,37 @@
         padding: 0.5rem 1rem;
     }
 }
+
+.btn-round {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid color(rgb_light_grey);
+    overflow: hidden;
+    text-indent: -999px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.btn-round-lg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &.btn-round-sm {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &.facebook {
+        background-image: url($icon-src-base + 'facebook.svg');
+    }
+
+    &.twitter {
+        background-image: url($icon-src-base + 'twitter.svg');
+    }
+
+    &.more {
+        background-image: url($icon-src-base + 'dots.svg');
+    }
+}
