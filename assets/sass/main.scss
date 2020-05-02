@@ -32,6 +32,7 @@ img {
 }
 
 // Elements
+@import './elements/icons';
 @import './elements/align';
 @import './elements/background';
 @import './elements/button';
@@ -53,6 +54,7 @@ img {
 @import './components/subscribe-popup';
 @import './components/intro';
 @import './components/pagination';
+@import './components/music-player';
 
 // Articles
 @import './components/article-hero';

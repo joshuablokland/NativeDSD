@@ -29,6 +29,28 @@
             "url" => "http://localhost:8080",
             "featured_img" => get_image_base_url("dev-article-medium.png")
         ];
+
+        $album = [
+            "artist" => "Mandy Moore, Bradley Moore",
+            "title" => "An American Song Album",
+            "playlist" => [[
+                "title" => "Vers la Lumière",
+                "source" => get_audio_base_url('sample.mp3'),
+                "type" => "audio/mpeg",
+                "duration" => "00:04:35"
+            ], [
+                "title" => "Vers la Lumière",
+                "source" => get_audio_base_url('sample.mp3'),
+                "type" => "audio/mpeg",
+                "duration" => "00:04:35"
+            ], [
+                "title" => "Vers la Lumière",
+                "source" => get_audio_base_url('sample.mp3'),
+                "type" => "audio/mpeg",
+                "duration" => "00:04:35"
+            ]],
+            "featured_img" => get_image_base_url("dev-music-review-small.png")
+        ];
     ?>
 
     <div class="article-single">
@@ -64,6 +86,7 @@
                     <p>
                         Melody Moore manages to lift out the poetry of these works with her warm, lyrical voice and impeccable vocal technique. She is accompanied on the piano by Bradley Moore, one of the most eminent conductors and song accompanists of today’s American musical scene.​
                     </p>
+                    <?php echo music_player($album); ?>
                 </div>
             </div>
         </div>

@@ -12,6 +12,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/post-meta.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/subscribe.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/subscribe-popup.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/music-player.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/articles/article.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/articles/article-hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/music-reviews/music-review.php';

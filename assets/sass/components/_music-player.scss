@@ -1,0 +1,189 @@
+$nativedsd-player-animation-properties: 0.15s ease-out;
+
+.music-player {
+    display: flex;
+    font-family: 'Larsseit-Regular';
+
+    @include breakpoint-down(mobile) {
+        flex-direction: column;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.music-player-artist {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint-down(desktop) {
+        font-size: 1rem;
+    }
+
+    @include breakpoint-down(mobile) {
+        font-size: 0.875rem;
+    }
+}
+
+.music-player-album-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 256px;
+
+    .background {
+        left: -2rem;
+        width: 100%;
+    }
+
+    @include breakpoint-down(desktop) {
+        width: 300px;
+
+        img {
+            width: 210px;
+            margin-left: auto;
+        }
+
+        .background {
+            width: calc(100% - 6rem);
+            left: 2.5rem;
+        }
+    }
+    
+    @include breakpoint-down(mobile) {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 100%;
+            margin: 2.5rem 0 2.5rem 5rem;
+        }
+
+        .background {
+            width: calc(100% - 5rem);
+            left: 2.5rem;
+        }
+    }
+}
+
+.music-player-album-songs {
+    flex: 1 1 auto;
+}
+
+.music-player-list-title {
+    font-size: 0.875rem;
+    color: color(rgb_dark_orange); 
+}
+
+.nativedsd-player {
+    display: flex;
+    align-items: center;
+    font-family: 'Larsseit-Regular';
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+
+    .nativedsd-player-number {
+        margin-right: 1rem;
+    }
+
+    .nativedsd-player-duration {
+        color: color(rgb_grey);
+        margin-left: auto;
+    }
+}
+
+.nativedsd-player-controls {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+
+    .btn-play,
+    .btn-pause {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        text-indent: -999px;
+        transform: scale(0.5);
+        transform-origin: center;
+        opacity: 0;
+        animation: animatePlayerControlButtonOut $nativedsd-player-animation-properties forwards;
+
+        &.show {
+            z-index: 2;
+            animation: animatePlayerControlButtonIn $nativedsd-player-animation-properties forwards;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btn-play {
+        background-image: url($icon-src-base + 'play.svg');
+    }
+
+    .btn-pause {
+        background-image: url($icon-src-base + 'pause.svg');
+    }
+}
+
+.nativedsd-player-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    .nativedsd-player-border-path,
+    .nativedsd-player-progress-path {
+        stroke-width: 1.5;
+        transition: stroke $nativedsd-player-animation-properties;
+    }
+
+    .nativedsd-player-progress-mask {
+        transform: translate(4px, 4px);
+    }
+}
+
+.is-playing .nativedsd-player-progress {
+    top: -4px;
+    left: -4px;
+    height: 48px;
+    width: 48px;
+
+    .nativedsd-player-border-path,
+    .nativedsd-player-progress-path {
+        stroke-width: 4;
+    }
+}
+
+@keyframes animatePlayerControlButtonIn {
+    0% {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes animatePlayerControlButtonOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+}

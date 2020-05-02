@@ -1,0 +1,30 @@
+$icons: (
+    arrow-left: 'arrow-left.svg',
+    arrow-right: 'arrow-right.svg',
+    bag: 'bag.svg',
+    cross: 'cross.svg',
+    cross-white: 'cross-white.svg',
+    dots: 'dots.svg',
+    facebook: 'facebook.svg',
+    magnifying-glass: 'magnifying-glass.svg',
+    pause: 'pause.svg',
+    play: 'play.svg',
+    twitter: 'twitter.svg'
+);
+
+.icon {
+    position: relative;
+    bottom: -0.15em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @each $icon, $src in $icons {
+        &.#{$icon} {
+            background-image: url($icon-src-base + $src);
+        }
+    }
+}

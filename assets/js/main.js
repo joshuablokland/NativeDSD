@@ -1,6 +1,9 @@
 const breakpointMobile = 616;
 const breakpointDesktop = 1216;
 
+/**
+ * Navigation
+ */
 class Navigation {
     constructor(element) {
         if (!element) {
@@ -80,6 +83,9 @@ class Navigation {
 const navigation = new Navigation(document.getElementById('nativedsd-navigation'));
 
 
+/**
+ * Subscribe popup
+ */
 class SubscribePopup {
     constructor(element) {
         if (!element) {
@@ -139,6 +145,75 @@ class SubscribePopup {
 }
 
 const subscribePopup = new SubscribePopup(document.getElementById('nativedsd-subscribe-popup'));
+
+
+/**
+ * Music player
+ */
+class MusicPlayer {
+    constructor(element, callbacks) {
+        this.audio = new Audio(element.getAttribute('data-source'));
+        this.callbacks = callbacks;
+
+        const btnPlay = element.querySelector('button.btn-play');
+        const btnPause = element.querySelector('button.btn-pause');
+        const progress = element.querySelector('.nativedsd-player-progress-path');
+
+        this.audio.addEventListener('loadeddata', () => {
+            const duration = new Date(this.audio.duration * 1000).toISOString().substr(11, 8);
+
+            element.querySelector('.nativedsd-player-duration').innerHTML = duration;
+        });
+
+        this.audio.addEventListener('timeupdate', () => {
+            const percentage = this.audio.currentTime / this.audio.duration;
+            const total = 138;
+            const calc = percentage * total;
+
+            progress.setAttribute('stroke-dasharray', `${calc},${total}`)
+
+        });
+
+        this.audio.addEventListener('pause', () => {
+            btnPlay.classList.add('show');
+            btnPause.classList.remove('show');
+            element.classList.remove('is-playing');
+        });
+
+        this.audio.addEventListener('play', () => {
+            btnPause.classList.add('show');
+            btnPlay.classList.remove('show');
+            element.classList.add('is-playing');
+        });
+
+        btnPlay.addEventListener('click', () => {
+            this.callbacks.onPlay();
+            this.audio.play();
+        });
+
+        btnPause.addEventListener('click', () => {
+            this.audio.pause();
+            this.callbacks.onPause();
+        });
+    }
+}
+
+const musicPlayers = (() => {
+    const $musicPlayers = document.getElementsByClassName('nativedsd-player');
+
+    if ($musicPlayers.length === 0) {
+        return;
+    }
+
+    const musicPlayers = Object.values($musicPlayers).map(musicPlayer => new MusicPlayer(musicPlayer, {
+        onPlay: () => {
+            musicPlayers.forEach(musicPlayer => musicPlayer.audio.pause())
+        },
+        onPause: () => { }
+    }));
+
+})()
+
 
 // Resize
 window.addEventListener('resize', () => {
