@@ -31,6 +31,10 @@
 .article-medium {
     margin-bottom: 3rem;
 
+    .link-wrapper {
+        margin-bottom: 1.5rem;
+    }
+
     @include breakpoint-up(mobile) {
         &:last-child {
             margin-bottom: 0;
@@ -46,6 +50,10 @@
 
 .article-large {
     margin-bottom: 4rem;
+
+    .link-wrapper {
+        margin-bottom: 1.5rem;
+    }
 
     @include breakpoint-up(mobile) {
         &:last-child {
@@ -79,6 +87,36 @@ $article-mobile-defaults: (large, medium);
                 flex: 0 0 auto;
                 width: 80px;
                 height: 80px;
+            }
+        }
+
+        .mobile-full-width {
+            &.highlighted-article-wrapper {
+                margin-bottom: 0 !important;
+            }
+
+            .article-#{$type} {
+                flex-direction: column;
+                
+                .link-wrapper {
+                    margin-bottom: 1rem;
+                }
+
+                .article-#{$type}-text {
+                    order: 2;
+                    margin: 0;
+                }
+        
+                .article-#{$type}-image {
+                    order: 1;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .paragraph {
+                    font-size: 1rem;
+                    line-height: 1.5em;
+                }
             }
         }
     }

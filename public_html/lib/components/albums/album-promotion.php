@@ -9,7 +9,7 @@
  */
 function album_promotion($album) {
     return '
-        <div class="album-promotion mb-80 mb-md-32 mb-sm-24">
+        <div class="album-promotion mb-80 mb-md-32 mb-sm-32">
             <a class="link-wrapper" href="'. $album['url'] .'" title="'. $album['title'] .'">
                 <img src="'.$album['featured_img'].'" alt="'. $album['title'] .'"/>
             </a>

@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container mb-128 mb-md-96 mb-sm-64">
             <div class="row collapse-md">
                 <div class="col-2 col-md-8 mb-md-32 mb-sm-24">
                     <div class="article-single-social">
@@ -142,8 +142,43 @@
                         <li>This album is a fine collection of songs by American composers.</li>
                     </ul>
                     <?php echo album_promotion($album_promotion) ?>
+                    <div class="mb-64 mb-md-48 mb-sm-24">
+                        <div class="tags-holder">
+                            <span class="tag">DSD Reviews</span>
+                            <span class="tag">Studio</span>
+                            <span class="tag">Release</span>
+                            <span class="tag">Mandy Moore</span>
+                        </div>
+                    </div>
+                    <div class="article-single-written-by">
+                        <h3>Written by</h3>
+                        <div class="article-single-written-by-author">
+                            <figure class="avatar">
+                                <img src="<?php echo get_image_base_url('dev-kate.png'); ?>" />
+                            </figure>
+                            <div>
+                                <div class="name">Floor van der Holst</div>
+                                <div class="function">Marketing & Label Manager</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <section class="container highlighted-articles mb-128 mb-md-96 mb-sm-64">
+        <div class="row mb-48 mb-md-16 mb-sm-16">
+            <div class="col-12">
+                <h1>You may also like</h1>
+            </div>
+        </div>
+        <div class="row collapse-sm">
+            <?php for ($i = 0; $i < 3; $i++) : ?>
+                <div class="highlighted-article-wrapper mobile-full-width col-4 col-md-4 col-sm-4">
+                    <?php echo article_medium($article); ?>
+                </div>
+            <?php endfor; ?>
         </div>
     </div>
 

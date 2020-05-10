@@ -1,0 +1,22 @@
+.tags-holder {
+    display: flex;
+    font-size: 1rem;
+    margin: -0.25em;
+
+    @include breakpoint-down(mobile) {
+        font-size: 0.875rem;
+    }
+}
+
+.tag {
+    line-height: 1.5em;
+    font-family: 'Larsseit-Regular';
+    background-color: color(rgb_beige);
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    margin: 0.25em;
+
+    @include breakpoint-down(mobile) {
+        padding: 0.4em 0.9em;
+    }
+}

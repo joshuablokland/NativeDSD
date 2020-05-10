@@ -58,7 +58,7 @@ function article_medium($article) {
 
     return '
         <div class="article-medium '. implode($classes) .'">
-            <a class="article-medium-image link-wrapper mb-24" href="'. $article['url'] .'" title="'. $article['title'] .'">
+            <a class="article-medium-image link-wrapper" href="'. $article['url'] .'" title="'. $article['title'] .'">
                 <img src="'. $article['featured_img'] .'" alt="'. $article['title'] .'"/>
             </a>
             <div class="article-medium-text">
@@ -91,7 +91,7 @@ function article_medium($article) {
 function article_large($article) {
     return '
         <div class="article-large">
-            <a class="article-large-image link-wrapper mb-24" href="'. $article['url'] .'" title="'. $article['title'] .'">
+            <a class="article-large-image link-wrapper" href="'. $article['url'] .'" title="'. $article['title'] .'">
                 <img src="'.$article['featured_img'].'" alt="'. $article['title'] .'"/>
             </a>
             <div class="article-large-text">

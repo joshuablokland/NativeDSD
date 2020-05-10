@@ -55,12 +55,14 @@
 
         @include breakpoint-down(desktop) {
             font-size: 1rem;
-            line-height: 2rem;   
+            line-height: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         @include breakpoint-down(mobile) {
             font-size: 0.875rem;
             line-height: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         a {
@@ -165,6 +167,15 @@
         li {
             margin: 0 0 1rem;
         }
+
+        @include breakpoint-down(desktop) {
+            margin-bottom: 2.5rem;
+        }
+
+        @include breakpoint-down(mobile) {
+            margin-bottom: 1.5rem;
+        }
+
     }
 
     ol {
@@ -186,6 +197,54 @@
             font-size: 1.5em;
             font-family: 'Larsseit-Bold';
             line-height: 1;
+        }
+    }
+}
+
+.article-single-written-by {
+    font-family: 'Larsseit-Medium';
+    border-top: 1px solid color(rgb_light_grey);
+    padding: 2em 0 0;
+
+    h3 {
+        margin-bottom: 1.5rem;
+    }
+
+    .avatar {
+        font-size: 3rem;
+        margin-right: 1rem;
+    }
+
+    .article-single-written-by-author {
+        display: flex;
+    }
+
+    .name {
+        font-family: 'Larsseit-Medium';
+        font-size: 1.125rem;
+        line-height: 1.5em;
+        margin: 0;
+    }
+
+    .function {
+        font-family: 'Larsseit-Regular';
+    }
+
+    @include breakpoint-down(mobile) {
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        .avatar {
+            font-size: 2.5rem;
+        }
+
+        .name {
+            font-size: 1rem;
+        }
+
+        .function {
+            font-size: 0.875rem;
         }
     }
 }
