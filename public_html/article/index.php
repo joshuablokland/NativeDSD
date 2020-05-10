@@ -87,6 +87,35 @@
                         Melody Moore manages to lift out the poetry of these works with her warm, lyrical voice and impeccable vocal technique. She is accompanied on the piano by Bradley Moore, one of the most eminent conductors and song accompanists of today’s American musical scene.​
                     </p>
                     <?php echo music_player($album); ?>
+                    <p>
+                        This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore. The repertoire includes Samuel Barber’s introspective Hermit Songs, Jake Heggie’s engaged cycles These Strangers and <a href="http://test.com" title="How Well I Knew the Light">How Well I Knew the Light</a>, Carlisle Floyd’s exploration of motherhood in The Mystery, Copland’s impressionist and oriental Four Early Songs, as well as a varied selection from Gordon Getty’s vocal works. Set to Irish, Welsh, Chilean, German, Arabic and Afro-American poetry, these pieces constitute a panorama of the US as a melting pot of cultures, while simultaneously being bound together by an unmistakably American sound.
+                    </p>
+                    <hr />
+                    <p>
+                        This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore. The repertoire includes Samuel Barber’s introspective Hermit Songs, Jake Heggie’s engaged cycles These Strangers and How Well I Knew the Light, Carlisle Floyd’s exploration of motherhood in The Mystery, Copland’s impressionist and oriental.
+                    </p>
+                    <blockquote class="wp-block-quote">
+                        <p>Sometimes I will click on a random sequence of notes- not to actually use it in a song, but to see if I can find maybe a simple pattern that I can build off of</p>
+                        <cite>Melody Moore</cite>
+                    </blockquote>
+                    <p>
+                        This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore. The repertoire includes Samuel Barber’s introspective Hermit Songs, Jake Heggie’s engaged cycles These Strangers and How Well I Knew the Light, Carlisle Floyd’s exploration of motherhood in The Mystery, Copland’s impressionist and oriental Four Early Songs, as well as a varied selection from Gordon Getty’s vocal works.
+                    </p>
+                    <figure class="wp-block-gallery columns-2 is-cropped">
+                        <ul class="blocks-gallery-grid">
+                            <li class="blocks-gallery-item">
+                                <figure>
+                                    <img src="http://localhost:8000/wp-content/uploads/2020/05/dev-gallery-image-819x1024.png" alt="" data-id="7" class="wp-image-7">
+                                </figure>
+                            </li>
+                            <li class="blocks-gallery-item">
+                                <figure>
+                                    <img src="http://localhost:8000/wp-content/uploads/2020/05/dev-gallery-image-2-819x1024.png" alt="" data-id="8" class="wp-image-8">
+                                </figure>
+                            </li>
+                        </ul>
+                        <figcaption class="blocks-gallery-caption">Photos by Gregory Pappas on Unsplash</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>

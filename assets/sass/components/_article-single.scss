@@ -36,21 +36,31 @@
 .article-single-content {
     font-family: 'Tiempos-Regular';
 
-    p {
-        @extend .paragraph;
-        @extend .styled;
+    // spacing
+    p, hr {
         margin-bottom: 3rem;
 
         @include breakpoint-down(desktop) {
-            font-size: 1rem;
-            line-height: 2rem;
             margin-bottom: 2.5rem;
+        }
+
+        @include breakpoint-down(mobile) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    p {
+        @extend .paragraph;
+        @extend .styled;
+
+        @include breakpoint-down(desktop) {
+            font-size: 1rem;
+            line-height: 2rem;   
         }
 
         @include breakpoint-down(mobile) {
             font-size: 0.875rem;
             line-height: 1.5rem;
-            margin-bottom: 1.5rem;
         }
     }
 
@@ -73,5 +83,138 @@
 
     a {
         @extend .link;
+    }
+
+    hr {
+        border: none;
+        margin-top: 0;
+        font-size: 1.5rem;
+
+        &:after {
+            content: '***';
+        }
+    }
+
+    blockquote {
+        position: relative;
+        font-family: 'Tiempos-Light';
+        font-size: 2rem;
+        line-height: 1.5em;
+        margin: 5rem 6rem;
+        padding-top: 2em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.875em;
+            height: 0.6875em;
+            display: inline-block;
+            background-image: url($icon-src-base + 'quote.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        cite {
+            position: absolute;
+            top: 0.15em;
+            left: 0;
+            color: color(rgb_grey);
+            font-size: 0.5625em;
+            line-height: 0.6875em;
+            padding-left: 1.55em;
+            font-style: normal;
+
+            &:before {
+                content: '';
+                position: relative;
+                top: -0.3em;
+                width: 1.7778em;
+                height: 1px;
+                margin: 0 0.8888em;
+                display: inline-block;
+                background-color: color(rgb_grey);
+            }
+        }
+
+        @include breakpoint-down(desktop) {
+            margin: 4rem 5.5rem;
+        }
+
+        @include breakpoint-down(mobile) {
+            margin: 2rem 1.5rem;
+            padding-top: 1.4em;
+            font-size: 1.25rem;
+
+            &:before {
+                width: 1em;
+                height: 0.8em;
+            }
+
+            cite {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+.wp-block-gallery {
+    margin: 0 0 4rem;
+
+    @include breakpoint-down(mobile) {
+        margin: 0 0 2rem;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    .blocks-gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: -1rem;
+        margin-right: -1rem;
+
+        .blocks-gallery-item {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 0 1rem;
+            margin: 0 0 2rem;
+        }
+
+        @include breakpoint-down(mobile) {
+            flex-direction: column;
+
+            .blocks-gallery-item {
+                width: 100%;
+                margin: 0 0 1rem;
+            }
+        }
+    }
+
+    .blocks-gallery-caption {
+        font-family: 'Larsseit-Regular';
+        font-size: 0.875rem;
+        color: color(rgb_grey);
+        margin: 0 0 2rem;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            position: relative;
+            top: -0.3em;
+            width: 2rem;
+            height: 1px;
+            margin-right: 1rem;
+            background-color: color(rgb_grey);
+        }
     }
 }
