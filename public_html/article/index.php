@@ -51,6 +51,13 @@
             ]],
             "featured_img" => get_image_base_url("dev-music-review-small.png")
         ];
+
+        $album_promotion = [
+            "artist" => "Mandy Moore, Bradley Moore",
+            "title" => "An American Song Album",
+            "url" => "http://localhost:8080",
+            "featured_img" => get_image_base_url("dev-music-review-small.png")
+        ];
     ?>
 
     <div class="article-single">
@@ -134,6 +141,7 @@
                         <li>This album is a fine collection of songs by American composers.</li>
                         <li>This album is a fine collection of songs by American composers.</li>
                     </ul>
+                    <?php echo album_promotion($album_promotion) ?>
                 </div>
             </div>
         </div>

@@ -19,6 +19,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/recordings/recording-hero.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/recordings/recording.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/hardware-updates/hardware-update-hero.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/albums/album-promotion.php';
     
     // Page components Homepage
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/pages/home/latest-articles.php';
