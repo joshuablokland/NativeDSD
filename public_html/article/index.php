@@ -116,6 +116,24 @@
                         </ul>
                         <figcaption class="blocks-gallery-caption">Photos by Gregory Pappas on Unsplash</figcaption>
                     </figure>
+                    <h2>Alinea</h2>
+                    <p>
+                        This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore. The repertoire includes Samuel Barber’s introspective Hermit Songs, Jake Heggie’s engaged cycles These Strangers and How Well I Knew the Light, Carlisle Floyd’s exploration of motherhood in The Mystery, Copland’s impressionist and oriental Four Early Songs, as well as a varied selection from Gordon Getty’s vocal works. Set to Irish, Welsh, Chilean, German, Arabic and Afro-American poetry, these pieces constitute a panorama of the US as a melting pot of cultures, while simultaneously being bound together by an unmistakably American sound.
+                    </p>
+                    <h2>Ordered List</h2>
+                    <ol>
+                        <li>This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore.</li>
+                        <li>This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore.</li>
+                        <li>This album is a fine collection of songs by American composers.</li>
+                        <li>This album is a fine collection of songs by American composers.</li>
+                    </ol>
+                    <h2>Unordered List</h2>
+                    <ul>
+                        <li>This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore.</li>
+                        <li>This album is a fine collection of songs by American composers, presented by soprano Melody Moore and pianist Bradley Moore.</li>
+                        <li>This album is a fine collection of songs by American composers.</li>
+                        <li>This album is a fine collection of songs by American composers.</li>
+                    </ul>
                 </div>
             </div>
         </div>
