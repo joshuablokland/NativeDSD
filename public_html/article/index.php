@@ -60,7 +60,11 @@
         ];
     ?>
 
-    <div class="article-single">
+    <div class="article-single track-scroll-progress">
+        <div class="track-scroll-progress-bar">
+            <!-- Tracks scroll progress of .track-scroll-progress with JavaScript -->
+        </div>
+
         <div class="container mb-16 mb-md-0 mb-sm-0">
             <?php echo page_intro($intro); ?>
         </div>
@@ -112,12 +116,12 @@
                         <ul class="blocks-gallery-grid">
                             <li class="blocks-gallery-item">
                                 <figure>
-                                    <img src="http://localhost:8000/wp-content/uploads/2020/05/dev-gallery-image-819x1024.png" alt="" data-id="7" class="wp-image-7">
+                                    <img src="<?php echo get_image_base_url("dev-gallery-image.png"); ?>" alt="" data-id="7" class="wp-image-7">
                                 </figure>
                             </li>
                             <li class="blocks-gallery-item">
                                 <figure>
-                                    <img src="http://localhost:8000/wp-content/uploads/2020/05/dev-gallery-image-2-819x1024.png" alt="" data-id="8" class="wp-image-8">
+                                    <img src="<?php echo get_image_base_url("dev-gallery-image-2.png"); ?>" alt="" data-id="8" class="wp-image-8">
                                 </figure>
                             </li>
                         </ul>

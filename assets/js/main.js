@@ -215,6 +215,49 @@ const musicPlayers = (() => {
 })()
 
 
+/**
+ * Scroll indicator
+ */
+class ScrollIndicator {
+    constructor(element, progress) {
+        if (!element) {
+            return;
+        }
+
+        this.element = element;
+        this.progress = progress;
+
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+
+    handleScroll() {
+        const max = window.scrollY > (this.element.offsetHeight - window.innerHeight);
+
+        if (max) {
+            this.setPercentage(100);
+
+            return;
+        }
+
+        const maxScreensInsideContent = (this.element.offsetHeight - window.innerHeight) / window.innerHeight;
+        const currentScreensInsideContent = window.scrollY / window.innerHeight;
+        const percentage = (currentScreensInsideContent / maxScreensInsideContent) * 100;
+
+        this.setPercentage(percentage);
+    }
+
+    setPercentage(percentage) {
+        const round = Math.round(percentage);
+
+        this.progress.style.width = round + '%';
+    }
+}
+
+const scrollIndicator = new ScrollIndicator(
+    document.querySelector('.track-scroll-progress'),
+    document.querySelector('.track-scroll-progress-bar')
+);
+
 // Resize
 window.addEventListener('resize', () => {
     if (navigation.element) {
