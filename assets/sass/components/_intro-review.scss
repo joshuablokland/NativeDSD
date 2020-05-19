@@ -1,0 +1,83 @@
+.intro-review {
+    h1.styled {
+        font-size: 4rem;
+        line-height: 4.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .post-meta {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .background {
+        width: calc(50% - 12rem);
+        height: calc(100% + 8rem);
+        top: -4rem;
+    }
+
+    @include breakpoint-down(desktop) {
+        h1.styled {
+            font-size: 3.5rem;
+            line-height: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-meta {
+            font-size: 1.125rem;
+            line-height: 1.25rem;
+        }
+        
+        .background {
+            top: -4rem;
+            width: 50%;
+            height: calc(100% + 4rem);
+        }
+    }
+
+    @include breakpoint-down(mobile) {
+        h1.styled {
+            font-size: 2rem;
+            line-height: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-meta {
+            font-size: 0.75rem;
+            line-height: 1.5rem;
+        }
+
+        .background {
+            top: -2rem;
+            width: 50%;
+            height: calc(100% + 2rem);
+        }
+    }
+}
+
+.intro-review-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include breakpoint-down(desktop) {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint-down(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.intro-review-covers {
+    display: flex;
+    align-self: flex-start;
+    flex-wrap: wrap;
+
+    img {
+        width: 50%;
+        height: auto;
+        border-radius: 0;
+    }
+}

@@ -16,4 +16,17 @@
     p.paragraph {
         margin: 0 0 0.5rem;
     }
+
+    @include breakpoint-down(mobile) {
+        justify-content: space-between;
+
+        .link-wrapper {
+            order: 2;
+            margin-right: 0;
+        }
+
+        .album-promotion-text {
+            order: 1;   
+        }
+    }
 }
