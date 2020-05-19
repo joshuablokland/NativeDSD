@@ -114,7 +114,7 @@
     position: relative;
 
     .background {
-        top: -5.5rem;
+        top: -6.5rem;
         height: calc(100% + 8.5rem);
 
         @include breakpoint-down(desktop) {
