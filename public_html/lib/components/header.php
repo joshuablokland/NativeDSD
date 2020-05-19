@@ -17,7 +17,7 @@ function nativedsd_header () {
                 <div class="popups">
                     '. subscribe_popup() .'
                 </div>
-                <header class="container">
+                <header class="container navbar-wrapper">
                     <div class="row">
                         <div class="col-12">
                             <div class="navbar">

@@ -6,7 +6,7 @@
 
 .article-single-social {
     position: sticky;
-    top: 2rem;
+    top: $navbar-height + 2rem;
     display: flex;
     flex-direction: column;
 

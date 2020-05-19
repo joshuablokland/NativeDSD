@@ -10,6 +10,7 @@ class Navigation {
             return;
         }
 
+        this.wrapper = document.querySelector('.navbar-wrapper');
         this.element = element;
         this.form = element.querySelector('.search');
         this.input = element.querySelector('.search input');
@@ -20,6 +21,28 @@ class Navigation {
 
         this.element.addEventListener('submit', this.handleSubmit.bind(this));
         this.close.addEventListener('click', this.handleClick.bind(this));
+
+        this.handleScrollBound = this.handleScroll.bind(this);
+
+        if (window.innerWidth > breakpointDesktop) {
+            window.addEventListener('scroll', this.handleScrollBound);
+        }
+    }
+
+    handleScroll(event) {
+        const hasClass = this.wrapper.classList.contains('sticky');
+
+        if (window.scrollY > 16 && hasClass) {
+            return;
+        }
+
+        if (window.scrollY > 16 && !hasClass) {
+            this.wrapper.classList.add('sticky');
+
+            return;
+        }
+
+        this.wrapper.classList.remove('sticky');
     }
 
     handleClick(event) {
@@ -48,14 +71,23 @@ class Navigation {
     }
 
     handleResize() {
-        if (!this.isVisible) {
+        if (!this.isVisible && window.innerWidth > breakpointDesktop) {
             this.form.style.width = '16px';
+
+            window.addEventListener('scroll', this.handleScrollBound);
+            this.handleScroll();
+
             return;
         }
 
         if (window.innerWidth <= breakpointDesktop) {
             const spacing = window.innerWidth <= breakpointMobile ? 32 : 96;
+
             this.form.style.width = (window.innerWidth - spacing) + 'px';
+            this.wrapper.classList.remove('sticky');
+
+            window.removeEventListener('scroll', this.handleScrollBound);
+
             return;
         }
 
