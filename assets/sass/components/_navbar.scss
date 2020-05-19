@@ -1,14 +1,24 @@
 .navbar-wrapper {    
+    position: sticky;
+    top: 0;
+    left: 0;
     margin-top: 1.5rem;
     padding:  1rem 0;
 
     &.sticky {
-        position: sticky;
-        top: 0;
-        left: 0;
         z-index: 10;
         background-color: color(rgb_white);
         border-bottom: 1px solid color(rgb_light_grey);
+    }
+
+    &.remove-sticky {
+        position: static;
+    }
+
+    @include breakpoint-down(desktop) {
+        padding: 0;
+        margin-top: 0;
+        border: none;
     }
 }
 
@@ -50,5 +60,6 @@
     @include breakpoint-down(desktop) {
         width: 117px;
         height: 32px;
+        margin-top: 0.25rem;
     }
 }

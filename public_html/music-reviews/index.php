@@ -13,7 +13,7 @@
             "artist" => "Chance the Rapper, Nirvana, Fleetwood Mac, Coldplay",
             "author" => "Floor van der Holst",
             "date" => "May 02, 2019",
-            "url" => "http://localhost:8080",
+            "url" => "http://localhost:8080/review",
             "featured_img" => get_image_base_url("dev-music-review-large.png")
         ];
 
@@ -22,7 +22,7 @@
             "artist" => "Mandy Moore, Bradley Moore",
             "author" => "Floor van der Holst",
             "date" => "May 02, 2019",
-            "url" => "http://localhost:8080",
+            "url" => "http://localhost:8080/review",
             "featured_img" => get_image_base_url("dev-music-review-small.png")
         ];
     ?>

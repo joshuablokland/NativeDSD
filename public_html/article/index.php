@@ -154,18 +154,7 @@
                             <span class="tag">Mandy Moore</span>
                         </div>
                     </div>
-                    <div class="article-single-written-by">
-                        <h3>Written by</h3>
-                        <div class="article-single-written-by-author">
-                            <figure class="avatar">
-                                <img src="<?php echo get_image_base_url('dev-kate.png'); ?>" />
-                            </figure>
-                            <div>
-                                <div class="name">Floor van der Holst</div>
-                                <div class="function">Marketing & Label Manager</div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php echo written_by(); ?>
                 </div>
             </div>
         </div>
@@ -185,6 +174,5 @@
             <?php endfor; ?>
         </div>
     </div>
-
 
 <?php echo nativedsd_footer(); ?>

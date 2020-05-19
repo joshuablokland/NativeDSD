@@ -18,6 +18,10 @@ class Navigation {
         this.boundHandleKeyup = this.handleKeyup.bind(this);
         this.activeClass = 'isSearchVisible';
         this.isVisible = false;
+        this.classes = {
+            sticky: 'sticky',
+            removeSticky: 'remove-sticky'
+        }
 
         this.element.addEventListener('submit', this.handleSubmit.bind(this));
         this.close.addEventListener('click', this.handleClick.bind(this));
@@ -27,22 +31,26 @@ class Navigation {
         if (window.innerWidth > breakpointDesktop) {
             window.addEventListener('scroll', this.handleScrollBound);
         }
+
+        if (window.innerWidth <= breakpointDesktop) {
+            this.wrapper.classList.add(this.classes.removeSticky);
+        }
     }
 
     handleScroll(event) {
-        const hasClass = this.wrapper.classList.contains('sticky');
+        const hasClass = this.wrapper.classList.contains(this.classes.sticky);
 
-        if (window.scrollY > 16 && hasClass) {
+        if (window.scrollY > 24 && hasClass) {
             return;
         }
 
-        if (window.scrollY > 16 && !hasClass) {
-            this.wrapper.classList.add('sticky');
+        if (window.scrollY > 24 && !hasClass) {
+            this.wrapper.classList.add(this.classes.sticky);
 
             return;
         }
 
-        this.wrapper.classList.remove('sticky');
+        this.wrapper.classList.remove(this.classes.sticky);
     }
 
     handleClick(event) {
@@ -71,8 +79,14 @@ class Navigation {
     }
 
     handleResize() {
+        if (!this.isVisible && window.innerWidth <= breakpointDesktop) {
+            this.form.style.width = '16px';
+
+            return;
+        }
         if (!this.isVisible && window.innerWidth > breakpointDesktop) {
             this.form.style.width = '16px';
+            this.wrapper.classList.remove(this.classes.removeSticky);
 
             window.addEventListener('scroll', this.handleScrollBound);
             this.handleScroll();
@@ -84,7 +98,8 @@ class Navigation {
             const spacing = window.innerWidth <= breakpointMobile ? 32 : 96;
 
             this.form.style.width = (window.innerWidth - spacing) + 'px';
-            this.wrapper.classList.remove('sticky');
+            this.wrapper.classList.remove(this.classes.sticky);
+            this.wrapper.classList.add(this.classes.removeSticky);
 
             window.removeEventListener('scroll', this.handleScrollBound);
 
@@ -244,7 +259,7 @@ const musicPlayers = (() => {
         onPause: () => { }
     }));
 
-})()
+})();
 
 
 /**
