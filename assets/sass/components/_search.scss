@@ -1,0 +1,36 @@
+$search-header-background-offset: $navbar-height + $navbar-offset;
+
+.search-header {
+    text-align: center;
+
+    .row {
+        justify-content: center;
+    }
+
+    .search-form {
+        width: 100%;
+        background-color: color(rgb_white);
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+        border-radius: 0.25rem;
+        padding: 0 1.125rem;
+
+        input.input.input-sm {
+            display: flex;
+            border-bottom: 0;
+            padding: 0.75rem 0;
+            font-size: 1.125rem;
+            line-height: 2rem;
+        }
+
+        .search-icon-open {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .background {
+        width: 100%;
+        height: calc(100% + #{$search-header-background-offset});
+        top: -$search-header-background-offset;
+    }
+}

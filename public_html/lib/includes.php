@@ -5,6 +5,7 @@
     // Components
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/header.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/footer.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/search-form.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/page-intro.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/pagination.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/lib/components/title.php';

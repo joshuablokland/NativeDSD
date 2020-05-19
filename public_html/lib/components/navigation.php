@@ -21,20 +21,10 @@ function navigation() {
                     <ul>
                         '. menu_items($navigation_items) .'
                     </ul>
-                    '.search().'
+                    '.search_form().'
                 </div>
             </div>
         </div>
-    ';
-}
-
-function search() {
-    return '
-        <form class="search-form">
-            <button type="submit" class="search-icon-open"></button>
-            <input class="input input-sm" type="text" name="search" placeholder="What are you looking for?" />
-            <button class="search-icon-close"></button>
-        </form>
     ';
 }
 ?>
