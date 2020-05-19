@@ -30,7 +30,7 @@ function navigation() {
 
 function search() {
     return '
-        <form class="search">
+        <form class="search-form">
             <button type="submit" class="search-icon-open"></button>
             <input class="input input-sm" type="text" name="search" placeholder="What are you looking for?" />
             <button class="search-icon-close"></button>

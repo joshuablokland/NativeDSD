@@ -12,9 +12,9 @@ class Navigation {
 
         this.wrapper = document.querySelector('.navbar-wrapper');
         this.element = element;
-        this.form = element.querySelector('.search');
-        this.input = element.querySelector('.search input');
-        this.close = element.querySelector('.search .search-icon-close');
+        this.form = element.querySelector('.search-form');
+        this.input = element.querySelector('.search-form input');
+        this.close = element.querySelector('.search-form .search-icon-close');
         this.boundHandleKeyup = this.handleKeyup.bind(this);
         this.activeClass = 'isSearchVisible';
         this.isVisible = false;
