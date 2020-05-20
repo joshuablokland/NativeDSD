@@ -30,7 +30,6 @@ $search-header-background-offset: $navbar-height + $navbar-offset;
 
     .background {
         width: 100%;
-        height: calc(100% + #{$search-header-background-offset});
-        top: -$search-header-background-offset;
+        @include background-under-navbar();
     }
 }

@@ -32,3 +32,21 @@ $breakpoint-spacing: $grid-outer-spacing-desktop-x + $grid-outer-spacing-desktop
             + "Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }
+
+$background-under-navbar-offset: $navbar-height + $navbar-offset;
+@mixin background-under-navbar($background-under-navbar-tablet: true) {
+    top: -$background-under-navbar-offset;
+    height: calc(100% + #{$background-under-navbar-offset});
+
+    @if($background-under-navbar-tablet) {
+        @include breakpoint-down(desktop) {
+            top: -$navbar-tablet-height;
+            height: calc(100% + #{$navbar-tablet-height});
+        }
+    } @else {
+        @include breakpoint-down(desktop) {
+            top: 0;
+            height: 100%;
+        }
+    }
+}

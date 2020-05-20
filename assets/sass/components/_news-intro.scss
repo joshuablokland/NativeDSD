@@ -1,16 +1,14 @@
 .news-intro {
     .background {
-        top: -6.5rem;
-        height: calc(100% - 4rem);
+        @include background-under-navbar(false);
         width: calc(50% + 10.5rem);
+        height: calc(100% - 4rem);
         background-image: url($img-src-base + 'background-news-intro.svg');
         background-position-y: center;
         background-position-x: right;
 
         @include breakpoint-down(desktop) {
             background-image: none;
-            top: 0;
-            height: 100%;
             width: 50%;
         }
 

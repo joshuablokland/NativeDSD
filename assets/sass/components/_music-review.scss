@@ -114,11 +114,10 @@
     position: relative;
 
     .background {
-        top: -6.5rem;
+        @include background-under-navbar(false);
         height: calc(100% + 8.5rem);
 
         @include breakpoint-down(desktop) {
-            top: 0;
             height: 35%;
         }
 
