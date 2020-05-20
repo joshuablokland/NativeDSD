@@ -79,11 +79,14 @@ class Navigation {
     }
 
     handleResize() {
+        console.log(window.removeEventListener('scroll', this.handleScrollBound, false));
+
         if (!this.isVisible && window.innerWidth <= breakpointDesktop) {
             this.form.style.width = '16px';
 
             return;
         }
+
         if (!this.isVisible && window.innerWidth > breakpointDesktop) {
             this.form.style.width = '16px';
             this.wrapper.classList.remove(this.classes.removeSticky);
@@ -100,8 +103,6 @@ class Navigation {
             this.form.style.width = (window.innerWidth - spacing) + 'px';
             this.wrapper.classList.remove(this.classes.sticky);
             this.wrapper.classList.add(this.classes.removeSticky);
-
-            window.removeEventListener('scroll', this.handleScrollBound);
 
             return;
         }
@@ -258,7 +259,6 @@ const musicPlayers = (() => {
         },
         onPause: () => { }
     }));
-
 })();
 
 

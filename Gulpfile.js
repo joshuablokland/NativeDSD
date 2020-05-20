@@ -15,6 +15,8 @@ var paths = {
     js_dist: './public_html/assets/js',
 };
 
+var vendor_scripts = ['./node_modules/classlist-polyfill/src/index.js'];
+
 gulp.task('sass', function () {
     return gulp.src(paths.css_dev)
         .pipe(sass().on('error', sass.logError))
@@ -25,7 +27,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('scripts_vendors', function () {
-    return gulp.src(vendor_scrips)
+    return gulp.src(vendor_scripts)
         .pipe(concat('vendors.nativedsd.js'))
         .pipe(minify())
         .pipe(gulp.dest(paths.js_dist))

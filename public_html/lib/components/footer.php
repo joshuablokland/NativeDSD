@@ -59,6 +59,7 @@ function nativedsd_footer() {
                 </section>
             </footer>
             </div>
+            <script src="http://'. $_SERVER['HTTP_HOST'] . '/assets/js/vendors.nativedsd-min.js"></script>
             <script src="http://'. $_SERVER['HTTP_HOST'] . '/assets/js/main-min.js"></script>
         </body>
     </html>
