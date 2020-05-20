@@ -29,7 +29,7 @@ class Navigation {
         this.handleScrollBound = this.handleScroll.bind(this);
 
         if (window.innerWidth > breakpointDesktop) {
-            window.addEventListener('scroll', this.handleScrollBound);
+            document.addEventListener('scroll', this.handleScrollBound);
         }
 
         if (window.innerWidth <= breakpointDesktop) {
@@ -79,20 +79,23 @@ class Navigation {
     }
 
     handleResize() {
-        console.log(window.removeEventListener('scroll', this.handleScrollBound, false));
+        document.removeEventListener('scroll', this.handleScrollBound, false);
 
-        if (!this.isVisible && window.innerWidth <= breakpointDesktop) {
-            this.form.style.width = '16px';
-
-            return;
+        if (window.innerWidth <= breakpointDesktop) {
+            this.wrapper.classList.remove(this.classes.sticky);
+            this.wrapper.classList.add(this.classes.removeSticky);
         }
 
-        if (!this.isVisible && window.innerWidth > breakpointDesktop) {
-            this.form.style.width = '16px';
+        if (window.innerWidth > breakpointDesktop) {
             this.wrapper.classList.remove(this.classes.removeSticky);
+            this.wrapper.classList.add(this.classes.sticky);
 
-            window.addEventListener('scroll', this.handleScrollBound);
+            document.addEventListener('scroll', this.handleScrollBound);
             this.handleScroll();
+        }
+
+        if (!this.isVisible) {
+            this.form.style.width = '16px';
 
             return;
         }
@@ -101,8 +104,6 @@ class Navigation {
             const spacing = window.innerWidth <= breakpointMobile ? 32 : 96;
 
             this.form.style.width = (window.innerWidth - spacing) + 'px';
-            this.wrapper.classList.remove(this.classes.sticky);
-            this.wrapper.classList.add(this.classes.removeSticky);
 
             return;
         }
@@ -274,7 +275,7 @@ class ScrollIndicator {
         this.element = element;
         this.progress = progress;
 
-        window.addEventListener('scroll', this.handleScroll.bind(this));
+        document.addEventListener('scroll', this.handleScroll.bind(this));
     }
 
     handleScroll() {
