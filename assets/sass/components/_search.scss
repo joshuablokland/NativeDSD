@@ -13,6 +13,7 @@ $search-header-background-offset: $navbar-height + $navbar-offset;
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
         border-radius: 0.25rem;
         padding: 0 1.125rem;
+        box-sizing: border-box;
 
         input.input.input-sm {
             display: flex;
@@ -29,7 +30,7 @@ $search-header-background-offset: $navbar-height + $navbar-offset;
     }
 
     .background {
-        width: 100%;
         @include background-under-navbar();
+        width: 100%;
     }
 }

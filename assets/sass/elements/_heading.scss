@@ -25,6 +25,11 @@ $headings: (
             justify-content: space-between;
             align-items: baseline;
         }
+
+        &.border-bottom {
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid color(rgb_light_grey);
+        }
     }
 }
 

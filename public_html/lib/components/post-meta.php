@@ -9,7 +9,7 @@
 function post_meta($author, $date) {
     return '
         <p class="post-meta">
-            <a class="link author" href="test.com" title="'. $author .'">'. $author .'</a> on '. $date .'
+            <a class="link link-author" href="test.com" title="'. $author .'">'. $author .'</a> on '. $date .'
         </p>
     ';
 }

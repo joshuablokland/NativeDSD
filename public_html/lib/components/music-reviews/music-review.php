@@ -49,7 +49,7 @@ function music_review_medium($music_review) {
             <a class="link-wrapper mb-24" href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                 <img src="'. $music_review['featured_img'] .'" alt="'. $music_review['title'] .'"/>
             </a>
-            <div>
+            <div class="music-review-medium-text">
                 <a href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                     <h3>'. $music_review['title'] .'</h3>
                 </a>
@@ -80,7 +80,7 @@ function music_review_large($music_review) {
             <a class="link-wrapper mb-24" href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                 <img src="'.$music_review['featured_img'].'" alt="'. $music_review['title'] .'"/>
             </a>
-            <div>
+            <div class="music-review-large-text">
                 <a href="'. $music_review['url'] .'" title="'. $music_review['title'] .'">
                     <h1>'. $music_review['title'] .'</h1>
                 </a>

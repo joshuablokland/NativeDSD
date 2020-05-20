@@ -1,3 +1,9 @@
+$music-review-sizes: (
+    s: 'small',
+    m: 'medium',
+    l: 'large'
+);
+
 .music-reviews {
     .row {
         justify-content: space-between;
@@ -72,23 +78,6 @@
     .link.category {
         margin-bottom: 0;
     }
-
-    @each $heading, $size in $headings {
-        #{$heading} {
-            margin: 0;
-        }
-    }
-
-    @include breakpoint-down(mobile) {
-        .link-wrapper{
-            width: 80px;
-        }
-        
-        .paragraph {
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-        }
-    }
 }
 
 .music-review-large {
@@ -109,6 +98,38 @@
         }
     }
 }
+
+@each $review, $size in $music-review-sizes {
+    @include breakpoint-down(mobile) {
+        .music-review-#{$size} {
+            display: flex;
+            justify-content: space-between;
+
+            @each $heading, $size in $headings {
+                #{$heading} {
+                    margin: 0;
+                }
+            }
+
+            .paragraph {
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            }
+
+            .link-wrapper {
+                order: 2;
+                width: 80px;
+                height: auto;
+                margin: 0;
+            }
+            
+            .music-review-#{$size}-text {
+                order: 1;
+            }
+        }
+    }
+}
+
 
 .music-reviews-intro {
     position: relative;

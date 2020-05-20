@@ -53,7 +53,7 @@
     <section class="container music-reviews">
         <div class="row mb-16 mb-sm-0">
             <?php for ($i = 0; $i < 12; $i++) : ?>
-                <div class="col-3 col-md-4 mb-48 mb-sm-32">
+                <div class="col-3 col-md-4 col-sm-4 mb-48 mb-sm-32">
                     <?php echo music_review_medium($review); ?>
                 </div>
             <?php endfor; ?>
